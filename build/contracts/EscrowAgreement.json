@@ -1,0 +1,315 @@
+{
+  "contractName": "EscrowAgreement",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "seller",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "buyer",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x6060604052341561000f57600080fd5b6101738061001e6000396000f30060606040526004361061004c576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806308551a53146100515780637150d8ae146100a6575b600080fd5b341561005c57600080fd5b6100646100fb565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34156100b157600080fd5b6100b9610121565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16815600a165627a7a72305820376824d9a3e52272f7de657168e5c662f95a499485dfd00ef41141d6a910c1d90029",
+  "deployedBytecode": "0x60606040526004361061004c576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806308551a53146100515780637150d8ae146100a6575b600080fd5b341561005c57600080fd5b6100646100fb565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34156100b157600080fd5b6100b9610121565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16815600a165627a7a72305820376824d9a3e52272f7de657168e5c662f95a499485dfd00ef41141d6a910c1d90029",
+  "sourceMap": "103:203:4:-;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "103:203:4:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;191:21;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;165:20;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;191:21;;;;;;;;;;;;;:::o;165:20::-;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity ^0.4.18;\n\nimport \"./Agreement.sol\";\n\n/*Extend the agreement with status of delivery */\ncontract EscrowAgreement is Agreement {\n    uint balance;\n    address public buyer;\n    address public seller;\n    address private escrow;\n    uint private start;\n    bool buyerOk;\n    bool sellerOk;\n  }\n",
+  "sourcePath": "/Users/arvindsubramanian/supplychain-new/contracts/protocols/agreements/EscrowAgreement.sol",
+  "ast": {
+    "attributes": {
+      "absolutePath": "/Users/arvindsubramanian/supplychain-new/contracts/protocols/agreements/EscrowAgreement.sol",
+      "exportedSymbols": {
+        "EscrowAgreement": [
+          161
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.4",
+            ".18"
+          ]
+        },
+        "id": 143,
+        "name": "PragmaDirective",
+        "src": "0:24:4"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 142,
+          "absolutePath": "/Users/arvindsubramanian/supplychain-new/contracts/protocols/agreements/Agreement.sol",
+          "file": "./Agreement.sol",
+          "scope": 162,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 144,
+        "name": "ImportDirective",
+        "src": "26:25:4"
+      },
+      {
+        "attributes": {
+          "contractDependencies": [
+            141
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            161,
+            141
+          ],
+          "name": "EscrowAgreement",
+          "scope": 162
+        },
+        "children": [
+          {
+            "attributes": {
+              "arguments": [
+                null
+              ]
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "Agreement",
+                  "referencedDeclaration": 141,
+                  "type": "contract Agreement"
+                },
+                "id": 145,
+                "name": "UserDefinedTypeName",
+                "src": "131:9:4"
+              }
+            ],
+            "id": 146,
+            "name": "InheritanceSpecifier",
+            "src": "131:9:4"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "balance",
+              "scope": 161,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "uint256",
+              "value": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "uint",
+                  "type": "uint256"
+                },
+                "id": 147,
+                "name": "ElementaryTypeName",
+                "src": "147:4:4"
+              }
+            ],
+            "id": 148,
+            "name": "VariableDeclaration",
+            "src": "147:12:4"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "buyer",
+              "scope": 161,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "address",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "address",
+                  "type": "address"
+                },
+                "id": 149,
+                "name": "ElementaryTypeName",
+                "src": "165:7:4"
+              }
+            ],
+            "id": 150,
+            "name": "VariableDeclaration",
+            "src": "165:20:4"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "seller",
+              "scope": 161,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "address",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "address",
+                  "type": "address"
+                },
+                "id": 151,
+                "name": "ElementaryTypeName",
+                "src": "191:7:4"
+              }
+            ],
+            "id": 152,
+            "name": "VariableDeclaration",
+            "src": "191:21:4"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "escrow",
+              "scope": 161,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "address",
+              "value": null,
+              "visibility": "private"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "address",
+                  "type": "address"
+                },
+                "id": 153,
+                "name": "ElementaryTypeName",
+                "src": "218:7:4"
+              }
+            ],
+            "id": 154,
+            "name": "VariableDeclaration",
+            "src": "218:22:4"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "start",
+              "scope": 161,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "uint256",
+              "value": null,
+              "visibility": "private"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "uint",
+                  "type": "uint256"
+                },
+                "id": 155,
+                "name": "ElementaryTypeName",
+                "src": "246:4:4"
+              }
+            ],
+            "id": 156,
+            "name": "VariableDeclaration",
+            "src": "246:18:4"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "buyerOk",
+              "scope": 161,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "bool",
+              "value": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "bool",
+                  "type": "bool"
+                },
+                "id": 157,
+                "name": "ElementaryTypeName",
+                "src": "270:4:4"
+              }
+            ],
+            "id": 158,
+            "name": "VariableDeclaration",
+            "src": "270:12:4"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "sellerOk",
+              "scope": 161,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "bool",
+              "value": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "bool",
+                  "type": "bool"
+                },
+                "id": 159,
+                "name": "ElementaryTypeName",
+                "src": "288:4:4"
+              }
+            ],
+            "id": 160,
+            "name": "VariableDeclaration",
+            "src": "288:13:4"
+          }
+        ],
+        "id": 161,
+        "name": "ContractDefinition",
+        "src": "103:203:4"
+      }
+    ],
+    "id": 162,
+    "name": "SourceUnit",
+    "src": "0:307:4"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.18+commit.9cf6e910.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "1.0.1",
+  "updatedAt": "2018-02-10T13:15:11.919Z"
+}

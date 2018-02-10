@@ -1,0 +1,2255 @@
+{
+  "contractName": "InvoiceActual",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "name": "country",
+          "type": "string"
+        },
+        {
+          "name": "weight",
+          "type": "int256"
+        },
+        {
+          "name": "hsCode",
+          "type": "int256"
+        },
+        {
+          "name": "quantity",
+          "type": "int256"
+        },
+        {
+          "name": "unitPrice",
+          "type": "int256"
+        },
+        {
+          "name": "totalPrice",
+          "type": "int256"
+        },
+        {
+          "name": "ipfsHash",
+          "type": "string"
+        }
+      ],
+      "name": "generateInvoice",
+      "outputs": [
+        {
+          "name": "",
+          "type": "int256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "invoiceId",
+          "type": "int256"
+        }
+      ],
+      "name": "lookUpInvoice",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        },
+        {
+          "name": "",
+          "type": "string"
+        },
+        {
+          "name": "",
+          "type": "int256"
+        },
+        {
+          "name": "",
+          "type": "int256"
+        },
+        {
+          "name": "",
+          "type": "int256"
+        },
+        {
+          "name": "",
+          "type": "int256"
+        },
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x6060604052341561000f57600080fd5b6108248061001e6000396000f30060606040526004361061004c576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680633cf8a7bf14610051578063513946ba14610175575b600080fd5b341561005c57600080fd5b61015f600480803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509190803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509190803590602001909190803590602001909190803590602001909190803590602001909190803590602001909190803590602001908201803590602001908080601f01602080910402602001604051908101604052809392919081815260200183838082843782019150505050505091905050610305565b6040518082815260200191505060405180910390f35b341561018057600080fd5b610196600480803590602001909190505061042a565b6040518080602001806020018881526020018781526020018681526020018581526020018060200184810384528b818151815260200191508051906020019080838360005b838110156101f65780820151818401526020810190506101db565b50505050905090810190601f1680156102235780820380516001836020036101000a031916815260200191505b5084810383528a818151815260200191508051906020019080838360005b8381101561025c578082015181840152602081019050610241565b50505050905090810190601f1680156102895780820380516001836020036101000a031916815260200191505b50848103825285818151815260200191508051906020019080838360005b838110156102c25780820151818401526020810190506102a7565b50505050905090810190601f1680156102ef5780820380516001836020036101000a031916815260200191505b509a505050505050505050505060405180910390f35b600061030f6106cc565b8981602001819052508881604001819052508781606001818152505086816080018181525050858160a0018181525050848160c0018181525050838160e001818152505082816101000181905250600c81600001818152505080600080836000015181526020019081526020016000206000820151816000015560208201518160010190805190602001906103a592919061072b565b5060408201518160020190805190602001906103c292919061072b565b50606082015181600301556080820151816004015560a0820151816005015560c0820151816006015560e0820151816007015561010082015181600801908051906020019061041292919061072b565b50905050806000015191505098975050505050505050565b6104326107ab565b61043a6107ab565b6000806000806104486107ab565b6000808981526020019081526020016000206001016000808a81526020019081526020016000206002016000808b8152602001908152602001600020600301546000808c8152602001908152602001600020600401546000808d8152602001908152602001600020600501546000808e8152602001908152602001600020600601546000808f8152602001908152602001600020600801868054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156105745780601f1061054957610100808354040283529160200191610574565b820191906000526020600020905b81548152906001019060200180831161055757829003601f168201915b50505050509650858054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156106105780601f106105e557610100808354040283529160200191610610565b820191906000526020600020905b8154815290600101906020018083116105f357829003601f168201915b50505050509550808054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156106ac5780601f10610681576101008083540402835291602001916106ac565b820191906000526020600020905b81548152906001019060200180831161068f57829003601f168201915b505050505090509650965096509650965096509650919395979092949650565b61012060405190810160405280600081526020016106e86107bf565b81526020016106f56107bf565b815260200160008152602001600081526020016000815260200160008152602001600081526020016107256107bf565b81525090565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061076c57805160ff191683800117855561079a565b8280016001018555821561079a579182015b8281111561079957825182559160200191906001019061077e565b5b5090506107a791906107d3565b5090565b602060405190810160405280600081525090565b602060405190810160405280600081525090565b6107f591905b808211156107f15760008160009055506001016107d9565b5090565b905600a165627a7a72305820838a4e92acb59dd29f9704a38727a95b9dc5003771d03a94e4f2a10e0cf274f90029",
+  "deployedBytecode": "0x60606040526004361061004c576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680633cf8a7bf14610051578063513946ba14610175575b600080fd5b341561005c57600080fd5b61015f600480803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509190803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509190803590602001909190803590602001909190803590602001909190803590602001909190803590602001909190803590602001908201803590602001908080601f01602080910402602001604051908101604052809392919081815260200183838082843782019150505050505091905050610305565b6040518082815260200191505060405180910390f35b341561018057600080fd5b610196600480803590602001909190505061042a565b6040518080602001806020018881526020018781526020018681526020018581526020018060200184810384528b818151815260200191508051906020019080838360005b838110156101f65780820151818401526020810190506101db565b50505050905090810190601f1680156102235780820380516001836020036101000a031916815260200191505b5084810383528a818151815260200191508051906020019080838360005b8381101561025c578082015181840152602081019050610241565b50505050905090810190601f1680156102895780820380516001836020036101000a031916815260200191505b50848103825285818151815260200191508051906020019080838360005b838110156102c25780820151818401526020810190506102a7565b50505050905090810190601f1680156102ef5780820380516001836020036101000a031916815260200191505b509a505050505050505050505060405180910390f35b600061030f6106cc565b8981602001819052508881604001819052508781606001818152505086816080018181525050858160a0018181525050848160c0018181525050838160e001818152505082816101000181905250600c81600001818152505080600080836000015181526020019081526020016000206000820151816000015560208201518160010190805190602001906103a592919061072b565b5060408201518160020190805190602001906103c292919061072b565b50606082015181600301556080820151816004015560a0820151816005015560c0820151816006015560e0820151816007015561010082015181600801908051906020019061041292919061072b565b50905050806000015191505098975050505050505050565b6104326107ab565b61043a6107ab565b6000806000806104486107ab565b6000808981526020019081526020016000206001016000808a81526020019081526020016000206002016000808b8152602001908152602001600020600301546000808c8152602001908152602001600020600401546000808d8152602001908152602001600020600501546000808e8152602001908152602001600020600601546000808f8152602001908152602001600020600801868054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156105745780601f1061054957610100808354040283529160200191610574565b820191906000526020600020905b81548152906001019060200180831161055757829003601f168201915b50505050509650858054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156106105780601f106105e557610100808354040283529160200191610610565b820191906000526020600020905b8154815290600101906020018083116105f357829003601f168201915b50505050509550808054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156106ac5780601f10610681576101008083540402835291602001916106ac565b820191906000526020600020905b81548152906001019060200180831161068f57829003601f168201915b505050505090509650965096509650965096509650919395979092949650565b61012060405190810160405280600081526020016106e86107bf565b81526020016106f56107bf565b815260200160008152602001600081526020016000815260200160008152602001600081526020016107256107bf565b81525090565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061076c57805160ff191683800117855561079a565b8280016001018555821561079a579182015b8281111561079957825182559160200191906001019061077e565b5b5090506107a791906107d3565b5090565b602060405190810160405280600081525090565b602060405190810160405280600081525090565b6107f591905b808211156107f15760008160009055506001016107d9565b5090565b905600a165627a7a72305820838a4e92acb59dd29f9704a38727a95b9dc5003771d03a94e4f2a10e0cf274f90029",
+  "sourceMap": "55:1338:12:-;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "55:1338:12:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;375:603;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;981:409;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:2;8:100;;;99:1;94:3;90;84:5;80:1;75:3;71;64:6;52:2;49:1;45:3;40:15;;8:100;;;12:14;3:109;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1;8:100;33:3;30:1;27:2;8:100;;;99:1;94:3;90;84:5;80:1;75:3;71;64:6;52:2;49:1;45:3;40:15;;8:100;;;12:14;3:109;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1;8:100;33:3;30:1;27:2;8:100;;;99:1;94:3;90;84:5;80:1;75:3;71;64:6;52:2;49:1;45:3;40:15;;8:100;;;12:14;3:109;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;375:603:12;536:3;548:30;;:::i;:::-;606:11;585:7;:19;;:32;;;;650:7;624;:23;;:33;;;;681:6;664:7;:14;;:23;;;;;710:6;694:7;:14;;:22;;;;;742:8;723:7;:16;;:27;;;;;777:9;757:7;:17;;:29;;;;;814:10;793:7;:18;;:31;;;;;849:8;831:7;:16;;:26;;;;877:2;864:7;:10;;:15;;;;;939:7;913:12;:24;926:7;:10;;;913:24;;;;;;;;;;;:33;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;960:7;:10;;;953:17;;375:603;;;;;;;;;;;:::o;981:409::-;1039:6;;:::i;:::-;1047;;:::i;:::-;1055:3;1059;1063;1067;1071:6;;:::i;:::-;1102:12;:23;1115:9;1102:23;;;;;;;;;;;:35;;1145:12;:23;1158:9;1145:23;;;;;;;;;;;:39;;1192:12;:23;1205:9;1192:23;;;;;;;;;;;:30;;;1230:12;:23;1243:9;1230:23;;;;;;;;;;;:30;;;1269:12;:23;1282:9;1269:23;;;;;;;;;;;:32;;;1310:12;:23;1323:9;1310:23;;;;;;;;;;;:33;;;1352:12;:23;1365:9;1352:23;;;;;;;;;;;:32;;1087:298;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;981:409;;;;;;;;;:::o;55:1338::-;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity ^0.4.18;\nimport \"./InvoiceMeta.sol\";\n\n\ncontract InvoiceActual is InvoiceMeta {\n struct InvoiceMetaData {\nint id;\nstring description;\nstring countryOfOrigin;\nint weight;  // floating point\nint hsCode;\nint quantity;\nint unitPrice;\nint totalPrice;\nstring ipfsHash; // link to the scanned document stored in ipfs\n}\nmapping(int => InvoiceMetaData) invoiceStore;\n  function generateInvoice(string description, string country, int weight, int hsCode, int quantity,\n    int unitPrice, int totalPrice, string ipfsHash)  returns (int) {\n     InvoiceMetaData memory invoice;\n     invoice.description= description;\n     invoice.countryOfOrigin = country;\n     invoice.weight = weight;\n     invoice.hsCode =hsCode;\n     invoice.quantity = quantity;\n     invoice.unitPrice = unitPrice;\n     invoice.totalPrice = totalPrice;\n     invoice.ipfsHash =ipfsHash;\n     invoice.id = 12; // generate unique id here\n     invoiceStore[invoice.id]= invoice;\n     return invoice.id;\n\n    }\n\n function lookUpInvoice(int invoiceId) constant returns\n  (string, string, int,int,int,int,string) {\n      return (\n      invoiceStore[invoiceId].description,\n      invoiceStore[invoiceId].countryOfOrigin,\n      invoiceStore[invoiceId].weight,\n      invoiceStore[invoiceId].hsCode,\n       invoiceStore[invoiceId].quantity,\n       invoiceStore[invoiceId].unitPrice,\n       invoiceStore[invoiceId].ipfsHash);\n  }\n\n}\n",
+  "sourcePath": "/Users/arvindsubramanian/supplychain-new/contracts/protocols/documents/goods/InvoiceActual.sol",
+  "ast": {
+    "attributes": {
+      "absolutePath": "/Users/arvindsubramanian/supplychain-new/contracts/protocols/documents/goods/InvoiceActual.sol",
+      "exportedSymbols": {
+        "InvoiceActual": [
+          505
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.4",
+            ".18"
+          ]
+        },
+        "id": 339,
+        "name": "PragmaDirective",
+        "src": "0:24:12"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 509,
+          "absolutePath": "/Users/arvindsubramanian/supplychain-new/contracts/protocols/documents/goods/InvoiceMeta.sol",
+          "file": "./InvoiceMeta.sol",
+          "scope": 506,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 340,
+        "name": "ImportDirective",
+        "src": "25:27:12"
+      },
+      {
+        "attributes": {
+          "contractDependencies": [
+            508
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            505,
+            508
+          ],
+          "name": "InvoiceActual",
+          "scope": 506
+        },
+        "children": [
+          {
+            "attributes": {
+              "arguments": [
+                null
+              ]
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "InvoiceMeta",
+                  "referencedDeclaration": 508,
+                  "type": "contract InvoiceMeta"
+                },
+                "id": 341,
+                "name": "UserDefinedTypeName",
+                "src": "81:11:12"
+              }
+            ],
+            "id": 342,
+            "name": "InheritanceSpecifier",
+            "src": "81:11:12"
+          },
+          {
+            "attributes": {
+              "canonicalName": "InvoiceActual.InvoiceMetaData",
+              "name": "InvoiceMetaData",
+              "scope": 505,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "id",
+                  "scope": 361,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "int256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "int",
+                      "type": "int256"
+                    },
+                    "id": 343,
+                    "name": "ElementaryTypeName",
+                    "src": "121:3:12"
+                  }
+                ],
+                "id": 344,
+                "name": "VariableDeclaration",
+                "src": "121:6:12"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "description",
+                  "scope": 361,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string storage pointer",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string storage pointer"
+                    },
+                    "id": 345,
+                    "name": "ElementaryTypeName",
+                    "src": "129:6:12"
+                  }
+                ],
+                "id": 346,
+                "name": "VariableDeclaration",
+                "src": "129:18:12"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "countryOfOrigin",
+                  "scope": 361,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string storage pointer",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string storage pointer"
+                    },
+                    "id": 347,
+                    "name": "ElementaryTypeName",
+                    "src": "149:6:12"
+                  }
+                ],
+                "id": 348,
+                "name": "VariableDeclaration",
+                "src": "149:22:12"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "weight",
+                  "scope": 361,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "int256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "int",
+                      "type": "int256"
+                    },
+                    "id": 349,
+                    "name": "ElementaryTypeName",
+                    "src": "173:3:12"
+                  }
+                ],
+                "id": 350,
+                "name": "VariableDeclaration",
+                "src": "173:10:12"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "hsCode",
+                  "scope": 361,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "int256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "int",
+                      "type": "int256"
+                    },
+                    "id": 351,
+                    "name": "ElementaryTypeName",
+                    "src": "204:3:12"
+                  }
+                ],
+                "id": 352,
+                "name": "VariableDeclaration",
+                "src": "204:10:12"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "quantity",
+                  "scope": 361,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "int256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "int",
+                      "type": "int256"
+                    },
+                    "id": 353,
+                    "name": "ElementaryTypeName",
+                    "src": "216:3:12"
+                  }
+                ],
+                "id": 354,
+                "name": "VariableDeclaration",
+                "src": "216:12:12"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "unitPrice",
+                  "scope": 361,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "int256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "int",
+                      "type": "int256"
+                    },
+                    "id": 355,
+                    "name": "ElementaryTypeName",
+                    "src": "230:3:12"
+                  }
+                ],
+                "id": 356,
+                "name": "VariableDeclaration",
+                "src": "230:13:12"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "totalPrice",
+                  "scope": 361,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "int256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "int",
+                      "type": "int256"
+                    },
+                    "id": 357,
+                    "name": "ElementaryTypeName",
+                    "src": "245:3:12"
+                  }
+                ],
+                "id": 358,
+                "name": "VariableDeclaration",
+                "src": "245:14:12"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "ipfsHash",
+                  "scope": 361,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string storage pointer",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string storage pointer"
+                    },
+                    "id": 359,
+                    "name": "ElementaryTypeName",
+                    "src": "261:6:12"
+                  }
+                ],
+                "id": 360,
+                "name": "VariableDeclaration",
+                "src": "261:15:12"
+              }
+            ],
+            "id": 361,
+            "name": "StructDefinition",
+            "src": "96:230:12"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "invoiceStore",
+              "scope": 505,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "mapping(int256 => struct InvoiceActual.InvoiceMetaData storage ref)",
+              "value": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "type": "mapping(int256 => struct InvoiceActual.InvoiceMetaData storage ref)"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "int",
+                      "type": "int256"
+                    },
+                    "id": 362,
+                    "name": "ElementaryTypeName",
+                    "src": "335:3:12"
+                  },
+                  {
+                    "attributes": {
+                      "contractScope": null,
+                      "name": "InvoiceMetaData",
+                      "referencedDeclaration": 361,
+                      "type": "struct InvoiceActual.InvoiceMetaData storage pointer"
+                    },
+                    "id": 363,
+                    "name": "UserDefinedTypeName",
+                    "src": "342:15:12"
+                  }
+                ],
+                "id": 364,
+                "name": "Mapping",
+                "src": "327:31:12"
+              }
+            ],
+            "id": 365,
+            "name": "VariableDeclaration",
+            "src": "327:44:12"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "implemented": true,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "generateInvoice",
+              "payable": false,
+              "scope": 505,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "description",
+                      "scope": 454,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string memory",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string storage pointer"
+                        },
+                        "id": 366,
+                        "name": "ElementaryTypeName",
+                        "src": "400:6:12"
+                      }
+                    ],
+                    "id": 367,
+                    "name": "VariableDeclaration",
+                    "src": "400:18:12"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "country",
+                      "scope": 454,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string memory",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string storage pointer"
+                        },
+                        "id": 368,
+                        "name": "ElementaryTypeName",
+                        "src": "420:6:12"
+                      }
+                    ],
+                    "id": 369,
+                    "name": "VariableDeclaration",
+                    "src": "420:14:12"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "weight",
+                      "scope": 454,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "int256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "int",
+                          "type": "int256"
+                        },
+                        "id": 370,
+                        "name": "ElementaryTypeName",
+                        "src": "436:3:12"
+                      }
+                    ],
+                    "id": 371,
+                    "name": "VariableDeclaration",
+                    "src": "436:10:12"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "hsCode",
+                      "scope": 454,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "int256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "int",
+                          "type": "int256"
+                        },
+                        "id": 372,
+                        "name": "ElementaryTypeName",
+                        "src": "448:3:12"
+                      }
+                    ],
+                    "id": 373,
+                    "name": "VariableDeclaration",
+                    "src": "448:10:12"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "quantity",
+                      "scope": 454,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "int256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "int",
+                          "type": "int256"
+                        },
+                        "id": 374,
+                        "name": "ElementaryTypeName",
+                        "src": "460:3:12"
+                      }
+                    ],
+                    "id": 375,
+                    "name": "VariableDeclaration",
+                    "src": "460:12:12"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "unitPrice",
+                      "scope": 454,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "int256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "int",
+                          "type": "int256"
+                        },
+                        "id": 376,
+                        "name": "ElementaryTypeName",
+                        "src": "478:3:12"
+                      }
+                    ],
+                    "id": 377,
+                    "name": "VariableDeclaration",
+                    "src": "478:13:12"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "totalPrice",
+                      "scope": 454,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "int256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "int",
+                          "type": "int256"
+                        },
+                        "id": 378,
+                        "name": "ElementaryTypeName",
+                        "src": "493:3:12"
+                      }
+                    ],
+                    "id": 379,
+                    "name": "VariableDeclaration",
+                    "src": "493:14:12"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "ipfsHash",
+                      "scope": 454,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string memory",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string storage pointer"
+                        },
+                        "id": 380,
+                        "name": "ElementaryTypeName",
+                        "src": "509:6:12"
+                      }
+                    ],
+                    "id": 381,
+                    "name": "VariableDeclaration",
+                    "src": "509:15:12"
+                  }
+                ],
+                "id": 382,
+                "name": "ParameterList",
+                "src": "399:126:12"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 454,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "int256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "int",
+                          "type": "int256"
+                        },
+                        "id": 383,
+                        "name": "ElementaryTypeName",
+                        "src": "536:3:12"
+                      }
+                    ],
+                    "id": 384,
+                    "name": "VariableDeclaration",
+                    "src": "536:3:12"
+                  }
+                ],
+                "id": 385,
+                "name": "ParameterList",
+                "src": "535:5:12"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "assignments": [
+                        null
+                      ],
+                      "initialValue": null
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "invoice",
+                          "scope": 454,
+                          "stateVariable": false,
+                          "storageLocation": "memory",
+                          "type": "struct InvoiceActual.InvoiceMetaData memory",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "contractScope": null,
+                              "name": "InvoiceMetaData",
+                              "referencedDeclaration": 361,
+                              "type": "struct InvoiceActual.InvoiceMetaData storage pointer"
+                            },
+                            "id": 386,
+                            "name": "UserDefinedTypeName",
+                            "src": "548:15:12"
+                          }
+                        ],
+                        "id": 387,
+                        "name": "VariableDeclaration",
+                        "src": "548:30:12"
+                      }
+                    ],
+                    "id": 388,
+                    "name": "VariableDeclarationStatement",
+                    "src": "548:30:12"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "string memory"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "description",
+                              "referencedDeclaration": 346,
+                              "type": "string memory"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 387,
+                                  "type": "struct InvoiceActual.InvoiceMetaData memory",
+                                  "value": "invoice"
+                                },
+                                "id": 389,
+                                "name": "Identifier",
+                                "src": "585:7:12"
+                              }
+                            ],
+                            "id": 391,
+                            "name": "MemberAccess",
+                            "src": "585:19:12"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 367,
+                              "type": "string memory",
+                              "value": "description"
+                            },
+                            "id": 392,
+                            "name": "Identifier",
+                            "src": "606:11:12"
+                          }
+                        ],
+                        "id": 393,
+                        "name": "Assignment",
+                        "src": "585:32:12"
+                      }
+                    ],
+                    "id": 394,
+                    "name": "ExpressionStatement",
+                    "src": "585:32:12"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "string memory"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "countryOfOrigin",
+                              "referencedDeclaration": 348,
+                              "type": "string memory"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 387,
+                                  "type": "struct InvoiceActual.InvoiceMetaData memory",
+                                  "value": "invoice"
+                                },
+                                "id": 395,
+                                "name": "Identifier",
+                                "src": "624:7:12"
+                              }
+                            ],
+                            "id": 397,
+                            "name": "MemberAccess",
+                            "src": "624:23:12"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 369,
+                              "type": "string memory",
+                              "value": "country"
+                            },
+                            "id": 398,
+                            "name": "Identifier",
+                            "src": "650:7:12"
+                          }
+                        ],
+                        "id": 399,
+                        "name": "Assignment",
+                        "src": "624:33:12"
+                      }
+                    ],
+                    "id": 400,
+                    "name": "ExpressionStatement",
+                    "src": "624:33:12"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "int256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "weight",
+                              "referencedDeclaration": 350,
+                              "type": "int256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 387,
+                                  "type": "struct InvoiceActual.InvoiceMetaData memory",
+                                  "value": "invoice"
+                                },
+                                "id": 401,
+                                "name": "Identifier",
+                                "src": "664:7:12"
+                              }
+                            ],
+                            "id": 403,
+                            "name": "MemberAccess",
+                            "src": "664:14:12"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 371,
+                              "type": "int256",
+                              "value": "weight"
+                            },
+                            "id": 404,
+                            "name": "Identifier",
+                            "src": "681:6:12"
+                          }
+                        ],
+                        "id": 405,
+                        "name": "Assignment",
+                        "src": "664:23:12"
+                      }
+                    ],
+                    "id": 406,
+                    "name": "ExpressionStatement",
+                    "src": "664:23:12"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "int256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "hsCode",
+                              "referencedDeclaration": 352,
+                              "type": "int256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 387,
+                                  "type": "struct InvoiceActual.InvoiceMetaData memory",
+                                  "value": "invoice"
+                                },
+                                "id": 407,
+                                "name": "Identifier",
+                                "src": "694:7:12"
+                              }
+                            ],
+                            "id": 409,
+                            "name": "MemberAccess",
+                            "src": "694:14:12"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 373,
+                              "type": "int256",
+                              "value": "hsCode"
+                            },
+                            "id": 410,
+                            "name": "Identifier",
+                            "src": "710:6:12"
+                          }
+                        ],
+                        "id": 411,
+                        "name": "Assignment",
+                        "src": "694:22:12"
+                      }
+                    ],
+                    "id": 412,
+                    "name": "ExpressionStatement",
+                    "src": "694:22:12"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "int256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "quantity",
+                              "referencedDeclaration": 354,
+                              "type": "int256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 387,
+                                  "type": "struct InvoiceActual.InvoiceMetaData memory",
+                                  "value": "invoice"
+                                },
+                                "id": 413,
+                                "name": "Identifier",
+                                "src": "723:7:12"
+                              }
+                            ],
+                            "id": 415,
+                            "name": "MemberAccess",
+                            "src": "723:16:12"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 375,
+                              "type": "int256",
+                              "value": "quantity"
+                            },
+                            "id": 416,
+                            "name": "Identifier",
+                            "src": "742:8:12"
+                          }
+                        ],
+                        "id": 417,
+                        "name": "Assignment",
+                        "src": "723:27:12"
+                      }
+                    ],
+                    "id": 418,
+                    "name": "ExpressionStatement",
+                    "src": "723:27:12"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "int256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "unitPrice",
+                              "referencedDeclaration": 356,
+                              "type": "int256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 387,
+                                  "type": "struct InvoiceActual.InvoiceMetaData memory",
+                                  "value": "invoice"
+                                },
+                                "id": 419,
+                                "name": "Identifier",
+                                "src": "757:7:12"
+                              }
+                            ],
+                            "id": 421,
+                            "name": "MemberAccess",
+                            "src": "757:17:12"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 377,
+                              "type": "int256",
+                              "value": "unitPrice"
+                            },
+                            "id": 422,
+                            "name": "Identifier",
+                            "src": "777:9:12"
+                          }
+                        ],
+                        "id": 423,
+                        "name": "Assignment",
+                        "src": "757:29:12"
+                      }
+                    ],
+                    "id": 424,
+                    "name": "ExpressionStatement",
+                    "src": "757:29:12"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "int256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "totalPrice",
+                              "referencedDeclaration": 358,
+                              "type": "int256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 387,
+                                  "type": "struct InvoiceActual.InvoiceMetaData memory",
+                                  "value": "invoice"
+                                },
+                                "id": 425,
+                                "name": "Identifier",
+                                "src": "793:7:12"
+                              }
+                            ],
+                            "id": 427,
+                            "name": "MemberAccess",
+                            "src": "793:18:12"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 379,
+                              "type": "int256",
+                              "value": "totalPrice"
+                            },
+                            "id": 428,
+                            "name": "Identifier",
+                            "src": "814:10:12"
+                          }
+                        ],
+                        "id": 429,
+                        "name": "Assignment",
+                        "src": "793:31:12"
+                      }
+                    ],
+                    "id": 430,
+                    "name": "ExpressionStatement",
+                    "src": "793:31:12"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "string memory"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "ipfsHash",
+                              "referencedDeclaration": 360,
+                              "type": "string memory"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 387,
+                                  "type": "struct InvoiceActual.InvoiceMetaData memory",
+                                  "value": "invoice"
+                                },
+                                "id": 431,
+                                "name": "Identifier",
+                                "src": "831:7:12"
+                              }
+                            ],
+                            "id": 433,
+                            "name": "MemberAccess",
+                            "src": "831:16:12"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 381,
+                              "type": "string memory",
+                              "value": "ipfsHash"
+                            },
+                            "id": 434,
+                            "name": "Identifier",
+                            "src": "849:8:12"
+                          }
+                        ],
+                        "id": 435,
+                        "name": "Assignment",
+                        "src": "831:26:12"
+                      }
+                    ],
+                    "id": 436,
+                    "name": "ExpressionStatement",
+                    "src": "831:26:12"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "int256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "id",
+                              "referencedDeclaration": 344,
+                              "type": "int256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 387,
+                                  "type": "struct InvoiceActual.InvoiceMetaData memory",
+                                  "value": "invoice"
+                                },
+                                "id": 437,
+                                "name": "Identifier",
+                                "src": "864:7:12"
+                              }
+                            ],
+                            "id": 439,
+                            "name": "MemberAccess",
+                            "src": "864:10:12"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "3132",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "number",
+                              "type": "int_const 12",
+                              "value": "12"
+                            },
+                            "id": 440,
+                            "name": "Literal",
+                            "src": "877:2:12"
+                          }
+                        ],
+                        "id": 441,
+                        "name": "Assignment",
+                        "src": "864:15:12"
+                      }
+                    ],
+                    "id": 442,
+                    "name": "ExpressionStatement",
+                    "src": "864:15:12"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "struct InvoiceActual.InvoiceMetaData storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "type": "struct InvoiceActual.InvoiceMetaData storage ref"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 365,
+                                  "type": "mapping(int256 => struct InvoiceActual.InvoiceMetaData storage ref)",
+                                  "value": "invoiceStore"
+                                },
+                                "id": 443,
+                                "name": "Identifier",
+                                "src": "913:12:12"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "member_name": "id",
+                                  "referencedDeclaration": 344,
+                                  "type": "int256"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 387,
+                                      "type": "struct InvoiceActual.InvoiceMetaData memory",
+                                      "value": "invoice"
+                                    },
+                                    "id": 444,
+                                    "name": "Identifier",
+                                    "src": "926:7:12"
+                                  }
+                                ],
+                                "id": 445,
+                                "name": "MemberAccess",
+                                "src": "926:10:12"
+                              }
+                            ],
+                            "id": 446,
+                            "name": "IndexAccess",
+                            "src": "913:24:12"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 387,
+                              "type": "struct InvoiceActual.InvoiceMetaData memory",
+                              "value": "invoice"
+                            },
+                            "id": 447,
+                            "name": "Identifier",
+                            "src": "939:7:12"
+                          }
+                        ],
+                        "id": 448,
+                        "name": "Assignment",
+                        "src": "913:33:12"
+                      }
+                    ],
+                    "id": 449,
+                    "name": "ExpressionStatement",
+                    "src": "913:33:12"
+                  },
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 385
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "member_name": "id",
+                          "referencedDeclaration": 344,
+                          "type": "int256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 387,
+                              "type": "struct InvoiceActual.InvoiceMetaData memory",
+                              "value": "invoice"
+                            },
+                            "id": 450,
+                            "name": "Identifier",
+                            "src": "960:7:12"
+                          }
+                        ],
+                        "id": 451,
+                        "name": "MemberAccess",
+                        "src": "960:10:12"
+                      }
+                    ],
+                    "id": 452,
+                    "name": "Return",
+                    "src": "953:17:12"
+                  }
+                ],
+                "id": 453,
+                "name": "Block",
+                "src": "541:437:12"
+              }
+            ],
+            "id": 454,
+            "name": "FunctionDefinition",
+            "src": "375:603:12"
+          },
+          {
+            "attributes": {
+              "constant": true,
+              "implemented": true,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "lookUpInvoice",
+              "payable": false,
+              "scope": 505,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "invoiceId",
+                      "scope": 504,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "int256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "int",
+                          "type": "int256"
+                        },
+                        "id": 455,
+                        "name": "ElementaryTypeName",
+                        "src": "1004:3:12"
+                      }
+                    ],
+                    "id": 456,
+                    "name": "VariableDeclaration",
+                    "src": "1004:13:12"
+                  }
+                ],
+                "id": 457,
+                "name": "ParameterList",
+                "src": "1003:15:12"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 504,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string memory",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string storage pointer"
+                        },
+                        "id": 458,
+                        "name": "ElementaryTypeName",
+                        "src": "1039:6:12"
+                      }
+                    ],
+                    "id": 459,
+                    "name": "VariableDeclaration",
+                    "src": "1039:6:12"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 504,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string memory",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string storage pointer"
+                        },
+                        "id": 460,
+                        "name": "ElementaryTypeName",
+                        "src": "1047:6:12"
+                      }
+                    ],
+                    "id": 461,
+                    "name": "VariableDeclaration",
+                    "src": "1047:6:12"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 504,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "int256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "int",
+                          "type": "int256"
+                        },
+                        "id": 462,
+                        "name": "ElementaryTypeName",
+                        "src": "1055:3:12"
+                      }
+                    ],
+                    "id": 463,
+                    "name": "VariableDeclaration",
+                    "src": "1055:3:12"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 504,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "int256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "int",
+                          "type": "int256"
+                        },
+                        "id": 464,
+                        "name": "ElementaryTypeName",
+                        "src": "1059:3:12"
+                      }
+                    ],
+                    "id": 465,
+                    "name": "VariableDeclaration",
+                    "src": "1059:3:12"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 504,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "int256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "int",
+                          "type": "int256"
+                        },
+                        "id": 466,
+                        "name": "ElementaryTypeName",
+                        "src": "1063:3:12"
+                      }
+                    ],
+                    "id": 467,
+                    "name": "VariableDeclaration",
+                    "src": "1063:3:12"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 504,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "int256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "int",
+                          "type": "int256"
+                        },
+                        "id": 468,
+                        "name": "ElementaryTypeName",
+                        "src": "1067:3:12"
+                      }
+                    ],
+                    "id": 469,
+                    "name": "VariableDeclaration",
+                    "src": "1067:3:12"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 504,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string memory",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string storage pointer"
+                        },
+                        "id": 470,
+                        "name": "ElementaryTypeName",
+                        "src": "1071:6:12"
+                      }
+                    ],
+                    "id": 471,
+                    "name": "VariableDeclaration",
+                    "src": "1071:6:12"
+                  }
+                ],
+                "id": 472,
+                "name": "ParameterList",
+                "src": "1038:40:12"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 472
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isInlineArray": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "type": "tuple(string storage ref,string storage ref,int256,int256,int256,int256,string storage ref)"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "description",
+                              "referencedDeclaration": 346,
+                              "type": "string storage ref"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "struct InvoiceActual.InvoiceMetaData storage ref"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 365,
+                                      "type": "mapping(int256 => struct InvoiceActual.InvoiceMetaData storage ref)",
+                                      "value": "invoiceStore"
+                                    },
+                                    "id": 473,
+                                    "name": "Identifier",
+                                    "src": "1102:12:12"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 456,
+                                      "type": "int256",
+                                      "value": "invoiceId"
+                                    },
+                                    "id": 474,
+                                    "name": "Identifier",
+                                    "src": "1115:9:12"
+                                  }
+                                ],
+                                "id": 475,
+                                "name": "IndexAccess",
+                                "src": "1102:23:12"
+                              }
+                            ],
+                            "id": 476,
+                            "name": "MemberAccess",
+                            "src": "1102:35:12"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "countryOfOrigin",
+                              "referencedDeclaration": 348,
+                              "type": "string storage ref"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "struct InvoiceActual.InvoiceMetaData storage ref"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 365,
+                                      "type": "mapping(int256 => struct InvoiceActual.InvoiceMetaData storage ref)",
+                                      "value": "invoiceStore"
+                                    },
+                                    "id": 477,
+                                    "name": "Identifier",
+                                    "src": "1145:12:12"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 456,
+                                      "type": "int256",
+                                      "value": "invoiceId"
+                                    },
+                                    "id": 478,
+                                    "name": "Identifier",
+                                    "src": "1158:9:12"
+                                  }
+                                ],
+                                "id": 479,
+                                "name": "IndexAccess",
+                                "src": "1145:23:12"
+                              }
+                            ],
+                            "id": 480,
+                            "name": "MemberAccess",
+                            "src": "1145:39:12"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "weight",
+                              "referencedDeclaration": 350,
+                              "type": "int256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "struct InvoiceActual.InvoiceMetaData storage ref"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 365,
+                                      "type": "mapping(int256 => struct InvoiceActual.InvoiceMetaData storage ref)",
+                                      "value": "invoiceStore"
+                                    },
+                                    "id": 481,
+                                    "name": "Identifier",
+                                    "src": "1192:12:12"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 456,
+                                      "type": "int256",
+                                      "value": "invoiceId"
+                                    },
+                                    "id": 482,
+                                    "name": "Identifier",
+                                    "src": "1205:9:12"
+                                  }
+                                ],
+                                "id": 483,
+                                "name": "IndexAccess",
+                                "src": "1192:23:12"
+                              }
+                            ],
+                            "id": 484,
+                            "name": "MemberAccess",
+                            "src": "1192:30:12"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "hsCode",
+                              "referencedDeclaration": 352,
+                              "type": "int256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "struct InvoiceActual.InvoiceMetaData storage ref"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 365,
+                                      "type": "mapping(int256 => struct InvoiceActual.InvoiceMetaData storage ref)",
+                                      "value": "invoiceStore"
+                                    },
+                                    "id": 485,
+                                    "name": "Identifier",
+                                    "src": "1230:12:12"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 456,
+                                      "type": "int256",
+                                      "value": "invoiceId"
+                                    },
+                                    "id": 486,
+                                    "name": "Identifier",
+                                    "src": "1243:9:12"
+                                  }
+                                ],
+                                "id": 487,
+                                "name": "IndexAccess",
+                                "src": "1230:23:12"
+                              }
+                            ],
+                            "id": 488,
+                            "name": "MemberAccess",
+                            "src": "1230:30:12"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "quantity",
+                              "referencedDeclaration": 354,
+                              "type": "int256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "struct InvoiceActual.InvoiceMetaData storage ref"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 365,
+                                      "type": "mapping(int256 => struct InvoiceActual.InvoiceMetaData storage ref)",
+                                      "value": "invoiceStore"
+                                    },
+                                    "id": 489,
+                                    "name": "Identifier",
+                                    "src": "1269:12:12"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 456,
+                                      "type": "int256",
+                                      "value": "invoiceId"
+                                    },
+                                    "id": 490,
+                                    "name": "Identifier",
+                                    "src": "1282:9:12"
+                                  }
+                                ],
+                                "id": 491,
+                                "name": "IndexAccess",
+                                "src": "1269:23:12"
+                              }
+                            ],
+                            "id": 492,
+                            "name": "MemberAccess",
+                            "src": "1269:32:12"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "unitPrice",
+                              "referencedDeclaration": 356,
+                              "type": "int256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "struct InvoiceActual.InvoiceMetaData storage ref"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 365,
+                                      "type": "mapping(int256 => struct InvoiceActual.InvoiceMetaData storage ref)",
+                                      "value": "invoiceStore"
+                                    },
+                                    "id": 493,
+                                    "name": "Identifier",
+                                    "src": "1310:12:12"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 456,
+                                      "type": "int256",
+                                      "value": "invoiceId"
+                                    },
+                                    "id": 494,
+                                    "name": "Identifier",
+                                    "src": "1323:9:12"
+                                  }
+                                ],
+                                "id": 495,
+                                "name": "IndexAccess",
+                                "src": "1310:23:12"
+                              }
+                            ],
+                            "id": 496,
+                            "name": "MemberAccess",
+                            "src": "1310:33:12"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "ipfsHash",
+                              "referencedDeclaration": 360,
+                              "type": "string storage ref"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "struct InvoiceActual.InvoiceMetaData storage ref"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 365,
+                                      "type": "mapping(int256 => struct InvoiceActual.InvoiceMetaData storage ref)",
+                                      "value": "invoiceStore"
+                                    },
+                                    "id": 497,
+                                    "name": "Identifier",
+                                    "src": "1352:12:12"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 456,
+                                      "type": "int256",
+                                      "value": "invoiceId"
+                                    },
+                                    "id": 498,
+                                    "name": "Identifier",
+                                    "src": "1365:9:12"
+                                  }
+                                ],
+                                "id": 499,
+                                "name": "IndexAccess",
+                                "src": "1352:23:12"
+                              }
+                            ],
+                            "id": 500,
+                            "name": "MemberAccess",
+                            "src": "1352:32:12"
+                          }
+                        ],
+                        "id": 501,
+                        "name": "TupleExpression",
+                        "src": "1094:291:12"
+                      }
+                    ],
+                    "id": 502,
+                    "name": "Return",
+                    "src": "1087:298:12"
+                  }
+                ],
+                "id": 503,
+                "name": "Block",
+                "src": "1079:311:12"
+              }
+            ],
+            "id": 504,
+            "name": "FunctionDefinition",
+            "src": "981:409:12"
+          }
+        ],
+        "id": 505,
+        "name": "ContractDefinition",
+        "src": "55:1338:12"
+      }
+    ],
+    "id": 506,
+    "name": "SourceUnit",
+    "src": "0:1394:12"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.18+commit.9cf6e910.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "1.0.1",
+  "updatedAt": "2018-02-10T13:15:11.920Z"
+}

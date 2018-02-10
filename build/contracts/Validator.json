@@ -1,0 +1,86 @@
+{
+  "contractName": "Validator",
+  "abi": [],
+  "bytecode": "0x60606040523415600e57600080fd5b603580601b6000396000f3006060604052600080fd00a165627a7a72305820c81774ef732f4dbdf6e45ed360e3ab5ee8a9b4e0971985d6d0891df319e051700029",
+  "deployedBytecode": "0x6060604052600080fd00a165627a7a72305820c81774ef732f4dbdf6e45ed360e3ab5ee8a9b4e0971985d6d0891df319e051700029",
+  "sourceMap": "93:24:22:-;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "93:24:22:-;;;;;",
+  "source": "import \"../documents/goods/InvoiceMeta.sol\";\nimport \"../documents/goods/InvoiceActual.sol\";\n\ncontract Validator{\n  \n}\n",
+  "sourcePath": "/Users/arvindsubramanian/supplychain-new/contracts/protocols/documents_validator/Validator.sol",
+  "ast": {
+    "attributes": {
+      "absolutePath": "/Users/arvindsubramanian/supplychain-new/contracts/protocols/documents_validator/Validator.sol",
+      "exportedSymbols": {
+        "Validator": [
+          746
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "SourceUnit": 509,
+          "absolutePath": "/Users/arvindsubramanian/supplychain-new/contracts/protocols/documents/goods/InvoiceMeta.sol",
+          "file": "../documents/goods/InvoiceMeta.sol",
+          "scope": 747,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 744,
+        "name": "ImportDirective",
+        "src": "0:44:22"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 506,
+          "absolutePath": "/Users/arvindsubramanian/supplychain-new/contracts/protocols/documents/goods/InvoiceActual.sol",
+          "file": "../documents/goods/InvoiceActual.sol",
+          "scope": 747,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 745,
+        "name": "ImportDirective",
+        "src": "45:46:22"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            746
+          ],
+          "name": "Validator",
+          "nodes": [
+            null
+          ],
+          "scope": 747
+        },
+        "id": 746,
+        "name": "ContractDefinition",
+        "src": "93:24:22"
+      }
+    ],
+    "id": 747,
+    "name": "SourceUnit",
+    "src": "0:118:22"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.18+commit.9cf6e910.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "1.0.1",
+  "updatedAt": "2018-02-10T13:15:11.923Z"
+}

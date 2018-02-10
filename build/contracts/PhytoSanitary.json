@@ -1,0 +1,56 @@
+{
+  "contractName": "PhytoSanitary",
+  "abi": [],
+  "bytecode": "0x60606040523415600e57600080fd5b603580601b6000396000f3006060604052600080fd00a165627a7a7230582010e02ee16cabf895d5fb637328dfdc6685859e31e6a46483e2be1285bf9661ef0029",
+  "deployedBytecode": "0x6060604052600080fd00a165627a7a7230582010e02ee16cabf895d5fb637328dfdc6685859e31e6a46483e2be1285bf9661ef0029",
+  "sourceMap": "0:27:21:-;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "0:27:21:-;;;;;",
+  "source": "contract PhytoSanitary {\n\n}\n",
+  "sourcePath": "/Users/arvindsubramanian/supplychain-new/contracts/protocols/documents/quality/Phytosanitary.sol",
+  "ast": {
+    "attributes": {
+      "absolutePath": "/Users/arvindsubramanian/supplychain-new/contracts/protocols/documents/quality/Phytosanitary.sol",
+      "exportedSymbols": {
+        "PhytoSanitary": [
+          742
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            742
+          ],
+          "name": "PhytoSanitary",
+          "nodes": [
+            null
+          ],
+          "scope": 743
+        },
+        "id": 742,
+        "name": "ContractDefinition",
+        "src": "0:27:21"
+      }
+    ],
+    "id": 743,
+    "name": "SourceUnit",
+    "src": "0:28:21"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.18+commit.9cf6e910.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "1.0.1",
+  "updatedAt": "2018-02-10T13:15:11.923Z"
+}

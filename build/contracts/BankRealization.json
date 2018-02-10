@@ -1,0 +1,56 @@
+{
+  "contractName": "BankRealization",
+  "abi": [],
+  "bytecode": "0x60606040523415600e57600080fd5b603580601b6000396000f3006060604052600080fd00a165627a7a7230582060b8e3e81ba4df5d7f779ce0f890eb5a48e82eac419a0d3698a3b52c501ab1f60029",
+  "deployedBytecode": "0x6060604052600080fd00a165627a7a7230582060b8e3e81ba4df5d7f779ce0f890eb5a48e82eac419a0d3698a3b52c501ab1f60029",
+  "sourceMap": "0:28:6:-;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "0:28:6:-;;;;;",
+  "source": "contract BankRealization{\n\n}\n",
+  "sourcePath": "/Users/arvindsubramanian/supplychain-new/contracts/protocols/documents/foreign_exchange/BankRealization.sol",
+  "ast": {
+    "attributes": {
+      "absolutePath": "/Users/arvindsubramanian/supplychain-new/contracts/protocols/documents/foreign_exchange/BankRealization.sol",
+      "exportedSymbols": {
+        "BankRealization": [
+          165
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            165
+          ],
+          "name": "BankRealization",
+          "nodes": [
+            null
+          ],
+          "scope": 166
+        },
+        "id": 165,
+        "name": "ContractDefinition",
+        "src": "0:28:6"
+      }
+    ],
+    "id": 166,
+    "name": "SourceUnit",
+    "src": "0:29:6"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.18+commit.9cf6e910.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "1.0.1",
+  "updatedAt": "2018-02-10T13:15:11.919Z"
+}

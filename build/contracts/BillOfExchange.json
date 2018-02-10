@@ -1,0 +1,94 @@
+{
+  "contractName": "BillOfExchange",
+  "abi": [],
+  "bytecode": "0x60606040523415600e57600080fd5b603580601b6000396000f3006060604052600080fd00a165627a7a72305820f8ec65d779dbc5235ad764ac98555a982fced36b13bfd7126d004e8ab0f38db90029",
+  "deployedBytecode": "0x6060604052600080fd00a165627a7a72305820f8ec65d779dbc5235ad764ac98555a982fced36b13bfd7126d004e8ab0f38db90029",
+  "sourceMap": "35:50:15:-;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "35:50:15:-;;;;;",
+  "source": "import \"./BillOfExchangeMeta.sol\";\ncontract BillOfExchange is BillOfExchangeMeta {\n\n}\n",
+  "sourcePath": "/Users/arvindsubramanian/supplychain-new/contracts/protocols/documents/payment/BillOfExchange.sol",
+  "ast": {
+    "attributes": {
+      "absolutePath": "/Users/arvindsubramanian/supplychain-new/contracts/protocols/documents/payment/BillOfExchange.sol",
+      "exportedSymbols": {
+        "BillOfExchange": [
+          694
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "SourceUnit": 697,
+          "absolutePath": "/Users/arvindsubramanian/supplychain-new/contracts/protocols/documents/payment/BillOfExchangeMeta.sol",
+          "file": "./BillOfExchangeMeta.sol",
+          "scope": 695,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 691,
+        "name": "ImportDirective",
+        "src": "0:34:15"
+      },
+      {
+        "attributes": {
+          "contractDependencies": [
+            696
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            694,
+            696
+          ],
+          "name": "BillOfExchange",
+          "nodes": [
+            null
+          ],
+          "scope": 695
+        },
+        "children": [
+          {
+            "attributes": {
+              "arguments": [
+                null
+              ]
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "BillOfExchangeMeta",
+                  "referencedDeclaration": 696,
+                  "type": "contract BillOfExchangeMeta"
+                },
+                "id": 692,
+                "name": "UserDefinedTypeName",
+                "src": "62:18:15"
+              }
+            ],
+            "id": 693,
+            "name": "InheritanceSpecifier",
+            "src": "62:18:15"
+          }
+        ],
+        "id": 694,
+        "name": "ContractDefinition",
+        "src": "35:50:15"
+      }
+    ],
+    "id": 695,
+    "name": "SourceUnit",
+    "src": "0:86:15"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.18+commit.9cf6e910.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "1.0.1",
+  "updatedAt": "2018-02-10T13:15:11.923Z"
+}

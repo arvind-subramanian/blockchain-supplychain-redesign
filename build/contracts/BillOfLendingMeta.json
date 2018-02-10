@@ -1,0 +1,393 @@
+{
+  "contractName": "BillOfLendingMeta",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "id",
+          "type": "int256"
+        }
+      ],
+      "name": "getBillOfLanding",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        },
+        {
+          "name": "",
+          "type": "int256"
+        },
+        {
+          "name": "",
+          "type": "string"
+        },
+        {
+          "name": "",
+          "type": "string"
+        },
+        {
+          "name": "",
+          "type": "string"
+        },
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "id",
+          "type": "int256"
+        }
+      ],
+      "name": "addBillOfLanding",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "contract BillOfLendingMeta{\nfunction addBillOfLanding(int id);\nfunction getBillOfLanding(int id) constant returns (string, int256,string,string,string, string);\n}\n",
+  "sourcePath": "/Users/arvindsubramanian/supplychain-new/contracts/protocols/documents/goods/BillOfLendingMeta.sol",
+  "ast": {
+    "attributes": {
+      "absolutePath": "/Users/arvindsubramanian/supplychain-new/contracts/protocols/documents/goods/BillOfLendingMeta.sol",
+      "exportedSymbols": {
+        "BillOfLendingMeta": [
+          291
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            291
+          ],
+          "name": "BillOfLendingMeta",
+          "scope": 292
+        },
+        "children": [
+          {
+            "attributes": {
+              "body": null,
+              "constant": false,
+              "implemented": false,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "addBillOfLanding",
+              "payable": false,
+              "scope": 291,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "id",
+                      "scope": 273,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "int256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "int",
+                          "type": "int256"
+                        },
+                        "id": 269,
+                        "name": "ElementaryTypeName",
+                        "src": "54:3:9"
+                      }
+                    ],
+                    "id": 270,
+                    "name": "VariableDeclaration",
+                    "src": "54:6:9"
+                  }
+                ],
+                "id": 271,
+                "name": "ParameterList",
+                "src": "53:8:9"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 272,
+                "name": "ParameterList",
+                "src": "61:0:9"
+              }
+            ],
+            "id": 273,
+            "name": "FunctionDefinition",
+            "src": "28:34:9"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "constant": true,
+              "implemented": false,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "getBillOfLanding",
+              "payable": false,
+              "scope": 291,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "id",
+                      "scope": 290,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "int256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "int",
+                          "type": "int256"
+                        },
+                        "id": 274,
+                        "name": "ElementaryTypeName",
+                        "src": "89:3:9"
+                      }
+                    ],
+                    "id": 275,
+                    "name": "VariableDeclaration",
+                    "src": "89:6:9"
+                  }
+                ],
+                "id": 276,
+                "name": "ParameterList",
+                "src": "88:8:9"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 290,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string memory",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string storage pointer"
+                        },
+                        "id": 277,
+                        "name": "ElementaryTypeName",
+                        "src": "115:6:9"
+                      }
+                    ],
+                    "id": 278,
+                    "name": "VariableDeclaration",
+                    "src": "115:6:9"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 290,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "int256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "int256",
+                          "type": "int256"
+                        },
+                        "id": 279,
+                        "name": "ElementaryTypeName",
+                        "src": "123:6:9"
+                      }
+                    ],
+                    "id": 280,
+                    "name": "VariableDeclaration",
+                    "src": "123:6:9"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 290,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string memory",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string storage pointer"
+                        },
+                        "id": 281,
+                        "name": "ElementaryTypeName",
+                        "src": "130:6:9"
+                      }
+                    ],
+                    "id": 282,
+                    "name": "VariableDeclaration",
+                    "src": "130:6:9"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 290,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string memory",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string storage pointer"
+                        },
+                        "id": 283,
+                        "name": "ElementaryTypeName",
+                        "src": "137:6:9"
+                      }
+                    ],
+                    "id": 284,
+                    "name": "VariableDeclaration",
+                    "src": "137:6:9"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 290,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string memory",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string storage pointer"
+                        },
+                        "id": 285,
+                        "name": "ElementaryTypeName",
+                        "src": "144:6:9"
+                      }
+                    ],
+                    "id": 286,
+                    "name": "VariableDeclaration",
+                    "src": "144:6:9"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 290,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string memory",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string storage pointer"
+                        },
+                        "id": 287,
+                        "name": "ElementaryTypeName",
+                        "src": "152:6:9"
+                      }
+                    ],
+                    "id": 288,
+                    "name": "VariableDeclaration",
+                    "src": "152:6:9"
+                  }
+                ],
+                "id": 289,
+                "name": "ParameterList",
+                "src": "114:45:9"
+              }
+            ],
+            "id": 290,
+            "name": "FunctionDefinition",
+            "src": "63:97:9"
+          }
+        ],
+        "id": 291,
+        "name": "ContractDefinition",
+        "src": "0:162:9"
+      }
+    ],
+    "id": 292,
+    "name": "SourceUnit",
+    "src": "0:163:9"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.18+commit.9cf6e910.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "1.0.1",
+  "updatedAt": "2018-02-10T13:15:11.920Z"
+}

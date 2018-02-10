@@ -1,0 +1,369 @@
+Compiling ./contracts/Migrations.sol...
+Compiling ./contracts/protocols/Utils/ArrayUtils.sol...
+Compiling ./contracts/protocols/Utils/Ownable.sol...
+Compiling ./contracts/protocols/agreements/Agreement.sol...
+Compiling ./contracts/protocols/agreements/EscrowAgreement.sol...
+Compiling ./contracts/protocols/documents/DocumentBase.sol...
+Compiling ./contracts/protocols/documents/foreign_exchange/BankRealization.sol...
+Compiling ./contracts/protocols/documents/foreign_exchange/Grform.sol...
+Compiling ./contracts/protocols/documents/goods/BillOfLendingActual.sol...
+Compiling ./contracts/protocols/documents/goods/BillOfLendingMeta.sol...
+Compiling ./contracts/protocols/documents/goods/CertificateOfOriginActual.sol...
+Compiling ./contracts/protocols/documents/goods/CertificateOfOriginMeta.sol...
+Compiling ./contracts/protocols/documents/goods/InvoiceActual.sol...
+Compiling ./contracts/protocols/documents/goods/InvoiceMeta.sol...
+Compiling ./contracts/protocols/documents/goods/ProduceInfo.sol...
+Compiling ./contracts/protocols/documents/payment/BillOfExchange.sol...
+Compiling ./contracts/protocols/documents/payment/BillOfExchangeMeta.sol...
+Compiling ./contracts/protocols/documents/payment/LetterCredit.sol...
+Compiling ./contracts/protocols/documents/quality/GlobalGapCertification.sol...
+Compiling ./contracts/protocols/documents/quality/HealthCertificate.sol...
+Compiling ./contracts/protocols/documents/quality/OrganicCertification.sol...
+Compiling ./contracts/protocols/documents/quality/Phytosanitary.sol...
+Compiling ./contracts/protocols/documents_validator/Validator.sol...
+Compiling ./contracts/protocols/iotmeasurements/IoTMeasurements.sol...
+Compiling ./contracts/protocols/iotmeasurements/IoTMeasurementsOffChain.sol...
+Compiling ./contracts/protocols/iotmeasurements/IoTMeasurementsOnChain.sol...
+Compiling ./contracts/protocols/iotmeasurements/IotMeasurements.sol...
+Compiling ./contracts/protocols/product_lot/ProductLot.sol...
+Compiling ./contracts/protocols/product_lot/ProductLotBase.sol...
+Compiling ./contracts/protocols/transport/TransportLot.sol...
+Compiling ./contracts/protocols/transport/TransportLotBase.sol...
+Compiling ./contracts/protocols/user_profile/UserProfile.sol...
+
+Compilation warnings encountered:
+
+/Users/arvindsubramanian/supplychain-new/contracts/protocols/Utils/ArrayUtils.sol:4:3: Warning: No visibility specified. Defaulting to "public".
+  function indexOf(address[] storage self, address value) returns (uint) {
+  ^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/Utils/ArrayUtils.sol:1:1: Warning: Source file does not specify required compiler version!Consider adding "pragma solidity ^0.4.18
+library ArrayUtils {
+^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/Utils/Ownable.sol:7:3: Warning: No visibility specified. Defaulting to "public".
+  function Ownable() {
+  ^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/Utils/Ownable.sol:16:3: Warning: No visibility specified. Defaulting to "public".
+  function transferOwnership(address newOwner) onlyOwner {
+  ^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/documents/DocumentBase.sol:3:1: Warning: Source file does not specify required compiler version!Consider adding "pragma solidity ^0.4.18
+contract DocumentBase {
+^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/documents/foreign_exchange/BankRealization.sol:1:1: Warning: Source file does not specify required compiler version!Consider adding "pragma solidity ^0.4.18
+contract BankRealization{
+^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/documents/foreign_exchange/Grform.sol:1:1: Warning: Source file does not specify required compiler version!Consider adding "pragma solidity ^0.4.18
+contract Grform{
+^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/documents/goods/BillOfLendingMeta.sol:2:1: Warning: No visibility specified. Defaulting to "public".
+function addBillOfLanding(int id);
+^--------------------------------^
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/documents/goods/BillOfLendingMeta.sol:3:1: Warning: No visibility specified. Defaulting to "public".
+function getBillOfLanding(int id) constant returns (string, int256,string,string,string, string);
+^-----------------------------------------------------------------------------------------------^
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/documents/goods/BillOfLendingMeta.sol:1:1: Warning: Source file does not specify required compiler version!Consider adding "pragma solidity ^0.4.18
+contract BillOfLendingMeta{
+^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/documents/goods/BillOfLendingActual.sol:14:3: Warning: No visibility specified. Defaulting to "public".
+  function addBillOfLanding(int billId )  {
+  ^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/documents/goods/BillOfLendingActual.sol:22:3: Warning: No visibility specified. Defaulting to "public".
+  function getBillOfLanding(int id) constant returns  (string, int256,string,string,string, string){
+  ^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/documents/goods/CertificateOfOriginActual.sol:2:1: Warning: Source file does not specify required compiler version!Consider adding "pragma solidity ^0.4.18
+import "./CertificateOfOriginMeta.sol";
+^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/documents/goods/InvoiceActual.sol:18:3: Warning: No visibility specified. Defaulting to "public".
+  function generateInvoice(string description, string country, int weight, int hsCode, int quantity,
+  ^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/documents/goods/InvoiceActual.sol:35:2: Warning: No visibility specified. Defaulting to "public".
+ function lookUpInvoice(int invoiceId) constant returns
+ ^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/documents/payment/BillOfExchangeMeta.sol:1:1: Warning: Source file does not specify required compiler version!Consider adding "pragma solidity ^0.4.18
+contract BillOfExchangeMeta{
+^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/documents/payment/BillOfExchange.sol:1:1: Warning: Source file does not specify required compiler version!Consider adding "pragma solidity ^0.4.18
+import "./BillOfExchangeMeta.sol";
+^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/documents/payment/LetterCredit.sol:1:1: Warning: Source file does not specify required compiler version!Consider adding "pragma solidity ^0.4.18
+contract LetterCredit {
+^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/documents/quality/GlobalGapCertification.sol:1:1: Warning: Source file does not specify required compiler version!Consider adding "pragma solidity ^0.4.18
+contract GlobalGapCertification{
+^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/documents/quality/HealthCertificate.sol:1:1: Warning: Source file does not specify required compiler version!Consider adding "pragma solidity ^0.4.18
+contract HealthCertificate {
+^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/documents/quality/OrganicCertification.sol:3:3: Warning: No visibility specified. Defaulting to "public".
+  function addOrchard(string orchardName, address farmerId, address certifier);
+  ^---------------------------------------------------------------------------^
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/documents/quality/OrganicCertification.sol:4:3: Warning: No visibility specified. Defaulting to "public".
+  function getOrchard(int id) returns (string, int farmerId);
+  ^---------------------------------------------------------^
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/documents/quality/OrganicCertification.sol:1:1: Warning: Source file does not specify required compiler version!Consider adding "pragma solidity ^0.4.18
+contract OrchardRegistration {
+^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/documents/quality/Phytosanitary.sol:1:1: Warning: Source file does not specify required compiler version!Consider adding "pragma solidity ^0.4.18
+contract PhytoSanitary {
+^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/documents_validator/Validator.sol:1:1: Warning: Source file does not specify required compiler version!Consider adding "pragma solidity ^0.4.18
+import "../documents/goods/InvoiceMeta.sol";
+^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/iotmeasurements/IoTMeasurements.sol:5:3: Warning: No visibility specified. Defaulting to "public".
+  function getMeasurements(bytes32 []) constant returns (bytes32 [], int [], bytes32 [], uint [], bytes32 [], bytes32 []) {
+  ^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/iotmeasurements/IoTMeasurements.sol:9:7: Warning: No visibility specified. Defaulting to "public".
+      function getMeasurementIdAndValue(uint, uint []) constant returns (bytes32, int) {
+      ^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/iotmeasurements/IoTMeasurements.sol:13:7: Warning: No visibility specified. Defaulting to "public".
+      function addMeasurements(bytes32 [], int [], bytes32 [], uint [], bytes32 [], bytes32 []) {
+      ^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/iotmeasurements/IotMeasurements.sol:5:3: Warning: No visibility specified. Defaulting to "public".
+  function getMeasurements(bytes32 []) constant returns (bytes32 [], int [], bytes32 [], uint [], bytes32 [], bytes32 []) {
+  ^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/iotmeasurements/IotMeasurements.sol:9:7: Warning: No visibility specified. Defaulting to "public".
+      function getMeasurementIdAndValue(uint, uint []) constant returns (bytes32, int) {
+      ^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/iotmeasurements/IotMeasurements.sol:13:7: Warning: No visibility specified. Defaulting to "public".
+      function addMeasurements(bytes32 [], int [], bytes32 [], uint [], bytes32 [], bytes32 []) {
+      ^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/iotmeasurements/IoTMeasurementsOffChain.sol:7:3: Warning: No visibility specified. Defaulting to "public".
+  function getMeasurements(bytes32 []) constant returns (bytes32 [], int [], bytes32 [], uint [], bytes32 [], bytes32 []) {
+  ^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/iotmeasurements/IoTMeasurementsOffChain.sol:11:7: Warning: No visibility specified. Defaulting to "public".
+      function getMeasurementIdAndValue(uint, uint []) constant returns (bytes32, int) {
+      ^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/iotmeasurements/IoTMeasurementsOffChain.sol:15:7: Warning: No visibility specified. Defaulting to "public".
+      function addMeasurements(bytes32 [], int [], bytes32 [], uint [], bytes32 [], bytes32 []) {
+      ^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/iotmeasurements/IoTMeasurementsOnChain.sol:18:11: Warning: No visibility specified. Defaulting to "public".
+          function addMeasurements(bytes32 [] _attributes, int [] _values, bytes32 [] _events, uint [] _timestamps, bytes32 [] _farmer_codes, bytes32 [] _batch_nos) {
+          ^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/iotmeasurements/IoTMeasurementsOnChain.sol:29:11: Warning: No visibility specified. Defaulting to "public".
+          function getMeasurements(bytes32 []) constant returns (bytes32 [], int [], bytes32 [], uint [], bytes32 [], bytes32 []) {
+          ^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/iotmeasurements/IoTMeasurementsOnChain.sol:47:11: Warning: No visibility specified. Defaulting to "public".
+          function getMeasurementIdAndValue(uint i, uint []) constant returns (bytes32, int) {
+          ^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/product_lot/ProductLotBase.sol:8:3: Warning: No visibility specified. Defaulting to "public".
+  function addLot(int farmerId,int lotId, int quantity,
+  ^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/product_lot/ProductLot.sol:20:5: Warning: No visibility specified. Defaulting to "public".
+    function addLot(int farmerId,int lotId, Agreement agreement, DocumentBase docStore){
+    ^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/transport/TransportLotBase.sol:3:5: Warning: No visibility specified. Defaulting to "public".
+    function addLocationTransitInfo(int lotId, int locationId,uint lotStatus,
+    ^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/transport/TransportLot.sol:46:1: Warning: No visibility specified. Defaulting to "public".
+function addLocationTransitInfo(int lotId, int locationId,uint lotStatus,
+^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/user_profile/UserProfile.sol:42:3: Warning: No visibility specified. Defaulting to "public".
+  function createUser(string username,uint profileType, uint profileStatus){
+  ^
+Spanning multiple lines.
+
+
+/Users/arvindsubramanian/supplychain-new/contracts/protocols/Utils/ArrayUtils.sol:4:3: Warning: No visibility specified. Defaulting to "public".
+  function indexOf(address[] storage self, address value) returns (uint) {
+  ^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/Utils/ArrayUtils.sol:1:1: Warning: Source file does not specify required compiler version!Consider adding "pragma solidity ^0.4.18
+library ArrayUtils {
+^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/Utils/Ownable.sol:7:3: Warning: No visibility specified. Defaulting to "public".
+  function Ownable() {
+  ^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/Utils/Ownable.sol:16:3: Warning: No visibility specified. Defaulting to "public".
+  function transferOwnership(address newOwner) onlyOwner {
+  ^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/documents/DocumentBase.sol:3:1: Warning: Source file does not specify required compiler version!Consider adding "pragma solidity ^0.4.18
+contract DocumentBase {
+^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/documents/foreign_exchange/BankRealization.sol:1:1: Warning: Source file does not specify required compiler version!Consider adding "pragma solidity ^0.4.18
+contract BankRealization{
+^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/documents/foreign_exchange/Grform.sol:1:1: Warning: Source file does not specify required compiler version!Consider adding "pragma solidity ^0.4.18
+contract Grform{
+^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/documents/goods/BillOfLendingMeta.sol:2:1: Warning: No visibility specified. Defaulting to "public".
+function addBillOfLanding(int id);
+^--------------------------------^
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/documents/goods/BillOfLendingMeta.sol:3:1: Warning: No visibility specified. Defaulting to "public".
+function getBillOfLanding(int id) constant returns (string, int256,string,string,string, string);
+^-----------------------------------------------------------------------------------------------^
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/documents/goods/BillOfLendingMeta.sol:1:1: Warning: Source file does not specify required compiler version!Consider adding "pragma solidity ^0.4.18
+contract BillOfLendingMeta{
+^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/documents/goods/BillOfLendingActual.sol:14:3: Warning: No visibility specified. Defaulting to "public".
+  function addBillOfLanding(int billId )  {
+  ^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/documents/goods/BillOfLendingActual.sol:22:3: Warning: No visibility specified. Defaulting to "public".
+  function getBillOfLanding(int id) constant returns  (string, int256,string,string,string, string){
+  ^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/documents/goods/CertificateOfOriginActual.sol:2:1: Warning: Source file does not specify required compiler version!Consider adding "pragma solidity ^0.4.18
+import "./CertificateOfOriginMeta.sol";
+^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/documents/goods/InvoiceActual.sol:1:1: SyntaxError: Source file requires different compiler version (current compiler is 0.4.18+commit.9cf6e910.Emscripten.clang - note that nightly builds are considered to be strictly less than the released version
+pragma solidity^0.4.19;
+^---------------------^
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/documents/goods/InvoiceActual.sol:18:3: Warning: No visibility specified. Defaulting to "public".
+  function generateInvoice(string description, string country, int weight, int hsCode, int quantity,
+  ^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/documents/goods/InvoiceActual.sol:35:2: Warning: No visibility specified. Defaulting to "public".
+ function lookUpInvoice(int invoiceId) constant returns
+ ^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/documents/payment/BillOfExchangeMeta.sol:1:1: Warning: Source file does not specify required compiler version!Consider adding "pragma solidity ^0.4.18
+contract BillOfExchangeMeta{
+^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/documents/payment/BillOfExchange.sol:1:1: Warning: Source file does not specify required compiler version!Consider adding "pragma solidity ^0.4.18
+import "./BillOfExchangeMeta.sol";
+^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/documents/payment/LetterCredit.sol:1:1: Warning: Source file does not specify required compiler version!Consider adding "pragma solidity ^0.4.18
+contract LetterCredit {
+^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/documents/quality/GlobalGapCertification.sol:1:1: Warning: Source file does not specify required compiler version!Consider adding "pragma solidity ^0.4.18
+contract GlobalGapCertification{
+^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/documents/quality/HealthCertificate.sol:1:1: Warning: Source file does not specify required compiler version!Consider adding "pragma solidity ^0.4.18
+contract HealthCertificate {
+^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/documents/quality/OrganicCertification.sol:3:3: Warning: No visibility specified. Defaulting to "public".
+  function addOrchard(string orchardName, address farmerId, address certifier);
+  ^---------------------------------------------------------------------------^
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/documents/quality/OrganicCertification.sol:4:3: Warning: No visibility specified. Defaulting to "public".
+  function getOrchard(int id) returns (string, int farmerId);
+  ^---------------------------------------------------------^
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/documents/quality/OrganicCertification.sol:1:1: Warning: Source file does not specify required compiler version!Consider adding "pragma solidity ^0.4.18
+contract OrchardRegistration {
+^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/documents/quality/Phytosanitary.sol:1:1: Warning: Source file does not specify required compiler version!Consider adding "pragma solidity ^0.4.18
+contract PhytoSanitary {
+^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/documents_validator/Validator.sol:1:1: Warning: Source file does not specify required compiler version!Consider adding "pragma solidity ^0.4.18
+import "../documents/goods/InvoiceMeta.sol";
+^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/iotmeasurements/IoTMeasurements.sol:5:3: Warning: No visibility specified. Defaulting to "public".
+  function getMeasurements(bytes32 []) constant returns (bytes32 [], int [], bytes32 [], uint [], bytes32 [], bytes32 []) {
+  ^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/iotmeasurements/IoTMeasurements.sol:9:7: Warning: No visibility specified. Defaulting to "public".
+      function getMeasurementIdAndValue(uint, uint []) constant returns (bytes32, int) {
+      ^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/iotmeasurements/IoTMeasurements.sol:13:7: Warning: No visibility specified. Defaulting to "public".
+      function addMeasurements(bytes32 [], int [], bytes32 [], uint [], bytes32 [], bytes32 []) {
+      ^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/iotmeasurements/IotMeasurements.sol:5:3: Warning: No visibility specified. Defaulting to "public".
+  function getMeasurements(bytes32 []) constant returns (bytes32 [], int [], bytes32 [], uint [], bytes32 [], bytes32 []) {
+  ^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/iotmeasurements/IotMeasurements.sol:9:7: Warning: No visibility specified. Defaulting to "public".
+      function getMeasurementIdAndValue(uint, uint []) constant returns (bytes32, int) {
+      ^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/iotmeasurements/IotMeasurements.sol:13:7: Warning: No visibility specified. Defaulting to "public".
+      function addMeasurements(bytes32 [], int [], bytes32 [], uint [], bytes32 [], bytes32 []) {
+      ^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/iotmeasurements/IoTMeasurementsOffChain.sol:7:3: Warning: No visibility specified. Defaulting to "public".
+  function getMeasurements(bytes32 []) constant returns (bytes32 [], int [], bytes32 [], uint [], bytes32 [], bytes32 []) {
+  ^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/iotmeasurements/IoTMeasurementsOffChain.sol:11:7: Warning: No visibility specified. Defaulting to "public".
+      function getMeasurementIdAndValue(uint, uint []) constant returns (bytes32, int) {
+      ^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/iotmeasurements/IoTMeasurementsOffChain.sol:15:7: Warning: No visibility specified. Defaulting to "public".
+      function addMeasurements(bytes32 [], int [], bytes32 [], uint [], bytes32 [], bytes32 []) {
+      ^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/iotmeasurements/IoTMeasurementsOnChain.sol:18:11: Warning: No visibility specified. Defaulting to "public".
+          function addMeasurements(bytes32 [] _attributes, int [] _values, bytes32 [] _events, uint [] _timestamps, bytes32 [] _farmer_codes, bytes32 [] _batch_nos) {
+          ^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/iotmeasurements/IoTMeasurementsOnChain.sol:29:11: Warning: No visibility specified. Defaulting to "public".
+          function getMeasurements(bytes32 []) constant returns (bytes32 [], int [], bytes32 [], uint [], bytes32 [], bytes32 []) {
+          ^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/iotmeasurements/IoTMeasurementsOnChain.sol:47:11: Warning: No visibility specified. Defaulting to "public".
+          function getMeasurementIdAndValue(uint i, uint []) constant returns (bytes32, int) {
+          ^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/product_lot/ProductLotBase.sol:8:3: Warning: No visibility specified. Defaulting to "public".
+  function addLot(int farmerId,int lotId, int quantity,
+  ^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/product_lot/ProductLot.sol:20:5: Warning: No visibility specified. Defaulting to "public".
+    function addLot(int farmerId,int lotId, Agreement agreement, DocumentBase docStore){
+    ^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/transport/TransportLotBase.sol:3:5: Warning: No visibility specified. Defaulting to "public".
+    function addLocationTransitInfo(int lotId, int locationId,uint lotStatus,
+    ^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/transport/TransportLot.sol:46:1: Warning: No visibility specified. Defaulting to "public".
+function addLocationTransitInfo(int lotId, int locationId,uint lotStatus,
+^
+Spanning multiple lines.
+,/Users/arvindsubramanian/supplychain-new/contracts/protocols/user_profile/UserProfile.sol:42:3: Warning: No visibility specified. Defaulting to "public".
+  function createUser(string username,uint profileType, uint profileStatus){
+  ^
+Spanning multiple lines.
+Compilation failed. See above.

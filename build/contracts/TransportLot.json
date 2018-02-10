@@ -1,0 +1,1654 @@
+{
+  "contractName": "TransportLot",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "lotId",
+          "type": "int256"
+        },
+        {
+          "name": "locationId",
+          "type": "int256"
+        },
+        {
+          "name": "lotStatus",
+          "type": "uint256"
+        },
+        {
+          "name": "lotRejectionReason",
+          "type": "uint256"
+        },
+        {
+          "name": "documentRejection",
+          "type": "uint256"
+        },
+        {
+          "name": "paymentsStatus",
+          "type": "uint256"
+        }
+      ],
+      "name": "addLocationTransitInfo",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "name": "len",
+          "type": "uint256"
+        }
+      ],
+      "name": "PrintArrayLength",
+      "type": "event"
+    }
+  ],
+  "bytecode": "0x6060604052341561000f57600080fd5b6104298061001e6000396000f300606060405260043610610041576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680639151e16a14610046575b600080fd5b341561005157600080fd5b6100946004808035906020019091908035906020019091908035906020019091908035906020019091908035906020019091908035906020019091905050610096565b005b61009e6102e9565b86816000018181525050858160200181815250508460028111156100be57fe5b816040019060028111156100ce57fe5b908160028111156100db57fe5b815250508360058111156100eb57fe5b816060019060058111156100fb57fe5b9081600581111561010857fe5b8152505082600381111561011857fe5b8160800190600381111561012857fe5b9081600381111561013557fe5b8152505081600281111561014557fe5b8160a00190600281111561015557fe5b9081600281111561016257fe5b81525050600080888152602001908152602001600020805480600101828161018a919061034c565b91600052602060002090600302016000839091909150600082015181600001556020820151816001015560408201518160020160006101000a81548160ff021916908360028111156101d857fe5b021790555060608201518160020160016101000a81548160ff0219169083600581111561020157fe5b021790555060808201518160020160026101000a81548160ff0219169083600381111561022a57fe5b021790555060a08201518160020160036101000a81548160ff0219169083600281111561025357fe5b02179055505050507f7965e210df63a6bc4b9b0c808f608bde54a7ecf9eaaa96f62bf9d4aab6aa205e600080898152602001908152602001600020805490506040518080602001838152602001828103825260068152602001807f4c656e67746800000000000000000000000000000000000000000000000000008152506020019250505060405180910390a150505050505050565b60c06040519081016040528060008152602001600081526020016000600281111561031057fe5b81526020016000600581111561032257fe5b81526020016000600381111561033457fe5b81526020016000600281111561034657fe5b81525090565b81548183558181151161037957600302816003028360005260206000209182019101610378919061037e565b5b505050565b6103fa91905b808211156103f65760008082016000905560018201600090556002820160006101000a81549060ff02191690556002820160016101000a81549060ff02191690556002820160026101000a81549060ff02191690556002820160036101000a81549060ff021916905550600301610384565b5090565b905600a165627a7a7230582052ea4126b404617f243a379064e2acdc9a8ef8dbc2e74e7091a99c8a8c516b960029",
+  "deployedBytecode": "0x606060405260043610610041576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680639151e16a14610046575b600080fd5b341561005157600080fd5b6100946004808035906020019091908035906020019091908035906020019091908035906020019091908035906020019091908035906020019091905050610096565b005b61009e6102e9565b86816000018181525050858160200181815250508460028111156100be57fe5b816040019060028111156100ce57fe5b908160028111156100db57fe5b815250508360058111156100eb57fe5b816060019060058111156100fb57fe5b9081600581111561010857fe5b8152505082600381111561011857fe5b8160800190600381111561012857fe5b9081600381111561013557fe5b8152505081600281111561014557fe5b8160a00190600281111561015557fe5b9081600281111561016257fe5b81525050600080888152602001908152602001600020805480600101828161018a919061034c565b91600052602060002090600302016000839091909150600082015181600001556020820151816001015560408201518160020160006101000a81548160ff021916908360028111156101d857fe5b021790555060608201518160020160016101000a81548160ff0219169083600581111561020157fe5b021790555060808201518160020160026101000a81548160ff0219169083600381111561022a57fe5b021790555060a08201518160020160036101000a81548160ff0219169083600281111561025357fe5b02179055505050507f7965e210df63a6bc4b9b0c808f608bde54a7ecf9eaaa96f62bf9d4aab6aa205e600080898152602001908152602001600020805490506040518080602001838152602001828103825260068152602001807f4c656e67746800000000000000000000000000000000000000000000000000008152506020019250505060405180910390a150505050505050565b60c06040519081016040528060008152602001600081526020016000600281111561031057fe5b81526020016000600581111561032257fe5b81526020016000600381111561033457fe5b81526020016000600281111561034657fe5b81525090565b81548183558181151161037957600302816003028360005260206000209182019101610378919061037e565b5b505050565b6103fa91905b808211156103f65760008082016000905560018201600090556002820160006101000a81549060ff02191690556002820160016101000a81549060ff02191690556002820160026101000a81549060ff02191690556002820160036101000a81549060ff021916905550600301610384565b5090565b905600a165627a7a7230582052ea4126b404617f243a379064e2acdc9a8ef8dbc2e74e7091a99c8a8c516b960029",
+  "sourceMap": "60:1375:29:-;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "60:1375:29:-;;;;;;;;;;;;;;;;;;;;;;;;869:563;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1018:23;;:::i;:::-;1058:5;1047:2;:8;;:16;;;;;1085:10;1069:2;:13;;:26;;;;;1126:9;1116:20;;;;;;;;1101:2;:12;;:35;;;;;;;;;;;;;;;;;;;;;;;1191:18;1166:44;;;;;;;;1142:2;:21;;:68;;;;;;;;;;;;;;;;;;;;;;;1266:17;1244:40;;;;;;;;1216:2;:26;;:68;;;;;;;;;;;;;;;;;;;;;;;1324:14;1310:29;;;;;;;;1290:2;:17;;:49;;;;;;;;;;;;;;;;;;;;;;;1345:10;:17;1356:5;1345:17;;;;;;;;;;;:26;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;1368:2;1345:26;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1377:52;1403:10;:17;1414:5;1403:17;;;;;;;;;;;:24;;;;1377:52;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;869:563;;;;;;;:::o;60:1375::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity ^0.4.18;\n\nimport \"./TransportLotBase.sol\";\n\ncontract TransportLot {\n  enum LotStatus{\n    InTransit,\n    Accepted,\n    Rejected\n  }\n  enum LotStatusRejectionReason{\n    NoError,\n    GoodQualityBad,\n    StorageNotGood,\n    PesticideContentDetected,\n    PackagingBad,\n    DocumentVerificationFailed\n  }\n\n  enum DocumentFailureReason {\n    NoError,\n    DocumentA,\n    DocumentB,\n    DocumentC\n  }\n  enum PaymentStatus {\n    PaymentPending,\n    PayementPartial,\n    PaymentComplete\n  }\n\nstruct LocationDelta {\n  int lotId;\n  int locationId;\n  LotStatus lotStatus;\n  LotStatusRejectionReason lotRejectionReason;\n  DocumentFailureReason documentRejectionReason;\n  PaymentStatus payementStatus;\n}\n\n/* For LotId, store in array inputs data that are updated or changed */\nmapping (int => LocationDelta[] ) lotIdArray;\n\nevent PrintArrayLength(string ,uint len);\n\nfunction addLocationTransitInfo(int lotId, int locationId,uint lotStatus,\nuint lotRejectionReason, uint documentRejection, uint paymentsStatus){\n    LocationDelta memory ld;\n    ld.lotId = lotId;\n    ld.locationId = locationId;\n    ld.lotStatus = LotStatus(lotStatus);\n    ld.lotRejectionReason = LotStatusRejectionReason(lotRejectionReason);\n    ld.documentRejectionReason =DocumentFailureReason(documentRejection);\n    ld.payementStatus = PaymentStatus(paymentsStatus);\n    lotIdArray[lotId].push(ld);\n    PrintArrayLength(\"Length\",lotIdArray[lotId].length );\n}\n\n}\n",
+  "sourcePath": "/Users/arvindsubramanian/supplychain-new/contracts/protocols/transport/TransportLot.sol",
+  "ast": {
+    "attributes": {
+      "absolutePath": "/Users/arvindsubramanian/supplychain-new/contracts/protocols/transport/TransportLot.sol",
+      "exportedSymbols": {
+        "TransportLot": [
+          1436
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.4",
+            ".18"
+          ]
+        },
+        "id": 1312,
+        "name": "PragmaDirective",
+        "src": "0:24:29"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 1455,
+          "absolutePath": "/Users/arvindsubramanian/supplychain-new/contracts/protocols/transport/TransportLotBase.sol",
+          "file": "./TransportLotBase.sol",
+          "scope": 1437,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 1313,
+        "name": "ImportDirective",
+        "src": "26:32:29"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            1436
+          ],
+          "name": "TransportLot",
+          "scope": 1437
+        },
+        "children": [
+          {
+            "attributes": {
+              "canonicalName": "TransportLot.LotStatus",
+              "name": "LotStatus"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "InTransit"
+                },
+                "id": 1314,
+                "name": "EnumValue",
+                "src": "106:9:29"
+              },
+              {
+                "attributes": {
+                  "name": "Accepted"
+                },
+                "id": 1315,
+                "name": "EnumValue",
+                "src": "121:8:29"
+              },
+              {
+                "attributes": {
+                  "name": "Rejected"
+                },
+                "id": 1316,
+                "name": "EnumValue",
+                "src": "135:8:29"
+              }
+            ],
+            "id": 1317,
+            "name": "EnumDefinition",
+            "src": "86:61:29"
+          },
+          {
+            "attributes": {
+              "canonicalName": "TransportLot.LotStatusRejectionReason",
+              "name": "LotStatusRejectionReason"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "NoError"
+                },
+                "id": 1318,
+                "name": "EnumValue",
+                "src": "185:7:29"
+              },
+              {
+                "attributes": {
+                  "name": "GoodQualityBad"
+                },
+                "id": 1319,
+                "name": "EnumValue",
+                "src": "198:14:29"
+              },
+              {
+                "attributes": {
+                  "name": "StorageNotGood"
+                },
+                "id": 1320,
+                "name": "EnumValue",
+                "src": "218:14:29"
+              },
+              {
+                "attributes": {
+                  "name": "PesticideContentDetected"
+                },
+                "id": 1321,
+                "name": "EnumValue",
+                "src": "238:24:29"
+              },
+              {
+                "attributes": {
+                  "name": "PackagingBad"
+                },
+                "id": 1322,
+                "name": "EnumValue",
+                "src": "268:12:29"
+              },
+              {
+                "attributes": {
+                  "name": "DocumentVerificationFailed"
+                },
+                "id": 1323,
+                "name": "EnumValue",
+                "src": "286:26:29"
+              }
+            ],
+            "id": 1324,
+            "name": "EnumDefinition",
+            "src": "150:166:29"
+          },
+          {
+            "attributes": {
+              "canonicalName": "TransportLot.DocumentFailureReason",
+              "name": "DocumentFailureReason"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "NoError"
+                },
+                "id": 1325,
+                "name": "EnumValue",
+                "src": "353:7:29"
+              },
+              {
+                "attributes": {
+                  "name": "DocumentA"
+                },
+                "id": 1326,
+                "name": "EnumValue",
+                "src": "366:9:29"
+              },
+              {
+                "attributes": {
+                  "name": "DocumentB"
+                },
+                "id": 1327,
+                "name": "EnumValue",
+                "src": "381:9:29"
+              },
+              {
+                "attributes": {
+                  "name": "DocumentC"
+                },
+                "id": 1328,
+                "name": "EnumValue",
+                "src": "396:9:29"
+              }
+            ],
+            "id": 1329,
+            "name": "EnumDefinition",
+            "src": "320:89:29"
+          },
+          {
+            "attributes": {
+              "canonicalName": "TransportLot.PaymentStatus",
+              "name": "PaymentStatus"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "PaymentPending"
+                },
+                "id": 1330,
+                "name": "EnumValue",
+                "src": "437:14:29"
+              },
+              {
+                "attributes": {
+                  "name": "PayementPartial"
+                },
+                "id": 1331,
+                "name": "EnumValue",
+                "src": "457:15:29"
+              },
+              {
+                "attributes": {
+                  "name": "PaymentComplete"
+                },
+                "id": 1332,
+                "name": "EnumValue",
+                "src": "478:15:29"
+              }
+            ],
+            "id": 1333,
+            "name": "EnumDefinition",
+            "src": "412:85:29"
+          },
+          {
+            "attributes": {
+              "canonicalName": "TransportLot.LocationDelta",
+              "name": "LocationDelta",
+              "scope": 1436,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "lotId",
+                  "scope": 1346,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "int256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "int",
+                      "type": "int256"
+                    },
+                    "id": 1334,
+                    "name": "ElementaryTypeName",
+                    "src": "524:3:29"
+                  }
+                ],
+                "id": 1335,
+                "name": "VariableDeclaration",
+                "src": "524:9:29"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "locationId",
+                  "scope": 1346,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "int256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "int",
+                      "type": "int256"
+                    },
+                    "id": 1336,
+                    "name": "ElementaryTypeName",
+                    "src": "537:3:29"
+                  }
+                ],
+                "id": 1337,
+                "name": "VariableDeclaration",
+                "src": "537:14:29"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "lotStatus",
+                  "scope": 1346,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "enum TransportLot.LotStatus",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "contractScope": null,
+                      "name": "LotStatus",
+                      "referencedDeclaration": 1317,
+                      "type": "enum TransportLot.LotStatus"
+                    },
+                    "id": 1338,
+                    "name": "UserDefinedTypeName",
+                    "src": "555:9:29"
+                  }
+                ],
+                "id": 1339,
+                "name": "VariableDeclaration",
+                "src": "555:19:29"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "lotRejectionReason",
+                  "scope": 1346,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "enum TransportLot.LotStatusRejectionReason",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "contractScope": null,
+                      "name": "LotStatusRejectionReason",
+                      "referencedDeclaration": 1324,
+                      "type": "enum TransportLot.LotStatusRejectionReason"
+                    },
+                    "id": 1340,
+                    "name": "UserDefinedTypeName",
+                    "src": "578:24:29"
+                  }
+                ],
+                "id": 1341,
+                "name": "VariableDeclaration",
+                "src": "578:43:29"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "documentRejectionReason",
+                  "scope": 1346,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "enum TransportLot.DocumentFailureReason",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "contractScope": null,
+                      "name": "DocumentFailureReason",
+                      "referencedDeclaration": 1329,
+                      "type": "enum TransportLot.DocumentFailureReason"
+                    },
+                    "id": 1342,
+                    "name": "UserDefinedTypeName",
+                    "src": "625:21:29"
+                  }
+                ],
+                "id": 1343,
+                "name": "VariableDeclaration",
+                "src": "625:45:29"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "payementStatus",
+                  "scope": 1346,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "enum TransportLot.PaymentStatus",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "contractScope": null,
+                      "name": "PaymentStatus",
+                      "referencedDeclaration": 1333,
+                      "type": "enum TransportLot.PaymentStatus"
+                    },
+                    "id": 1344,
+                    "name": "UserDefinedTypeName",
+                    "src": "674:13:29"
+                  }
+                ],
+                "id": 1345,
+                "name": "VariableDeclaration",
+                "src": "674:28:29"
+              }
+            ],
+            "id": 1346,
+            "name": "StructDefinition",
+            "src": "499:206:29"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "lotIdArray",
+              "scope": 1436,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "mapping(int256 => struct TransportLot.LocationDelta storage ref[] storage ref)",
+              "value": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "type": "mapping(int256 => struct TransportLot.LocationDelta storage ref[] storage ref)"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "int",
+                      "type": "int256"
+                    },
+                    "id": 1347,
+                    "name": "ElementaryTypeName",
+                    "src": "788:3:29"
+                  },
+                  {
+                    "attributes": {
+                      "length": null,
+                      "type": "struct TransportLot.LocationDelta storage ref[] storage pointer"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "contractScope": null,
+                          "name": "LocationDelta",
+                          "referencedDeclaration": 1346,
+                          "type": "struct TransportLot.LocationDelta storage pointer"
+                        },
+                        "id": 1348,
+                        "name": "UserDefinedTypeName",
+                        "src": "795:13:29"
+                      }
+                    ],
+                    "id": 1349,
+                    "name": "ArrayTypeName",
+                    "src": "795:15:29"
+                  }
+                ],
+                "id": 1350,
+                "name": "Mapping",
+                "src": "779:33:29"
+              }
+            ],
+            "id": 1351,
+            "name": "VariableDeclaration",
+            "src": "779:44:29"
+          },
+          {
+            "attributes": {
+              "anonymous": false,
+              "name": "PrintArrayLength"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "name": "",
+                      "scope": 1357,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string memory",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string storage pointer"
+                        },
+                        "id": 1352,
+                        "name": "ElementaryTypeName",
+                        "src": "849:6:29"
+                      }
+                    ],
+                    "id": 1353,
+                    "name": "VariableDeclaration",
+                    "src": "849:6:29"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "name": "len",
+                      "scope": 1357,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 1354,
+                        "name": "ElementaryTypeName",
+                        "src": "857:4:29"
+                      }
+                    ],
+                    "id": 1355,
+                    "name": "VariableDeclaration",
+                    "src": "857:8:29"
+                  }
+                ],
+                "id": 1356,
+                "name": "ParameterList",
+                "src": "848:18:29"
+              }
+            ],
+            "id": 1357,
+            "name": "EventDefinition",
+            "src": "826:41:29"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "implemented": true,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "addLocationTransitInfo",
+              "payable": false,
+              "scope": 1436,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "lotId",
+                      "scope": 1435,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "int256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "int",
+                          "type": "int256"
+                        },
+                        "id": 1358,
+                        "name": "ElementaryTypeName",
+                        "src": "901:3:29"
+                      }
+                    ],
+                    "id": 1359,
+                    "name": "VariableDeclaration",
+                    "src": "901:9:29"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "locationId",
+                      "scope": 1435,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "int256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "int",
+                          "type": "int256"
+                        },
+                        "id": 1360,
+                        "name": "ElementaryTypeName",
+                        "src": "912:3:29"
+                      }
+                    ],
+                    "id": 1361,
+                    "name": "VariableDeclaration",
+                    "src": "912:14:29"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "lotStatus",
+                      "scope": 1435,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 1362,
+                        "name": "ElementaryTypeName",
+                        "src": "927:4:29"
+                      }
+                    ],
+                    "id": 1363,
+                    "name": "VariableDeclaration",
+                    "src": "927:14:29"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "lotRejectionReason",
+                      "scope": 1435,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 1364,
+                        "name": "ElementaryTypeName",
+                        "src": "943:4:29"
+                      }
+                    ],
+                    "id": 1365,
+                    "name": "VariableDeclaration",
+                    "src": "943:23:29"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "documentRejection",
+                      "scope": 1435,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 1366,
+                        "name": "ElementaryTypeName",
+                        "src": "968:4:29"
+                      }
+                    ],
+                    "id": 1367,
+                    "name": "VariableDeclaration",
+                    "src": "968:22:29"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "paymentsStatus",
+                      "scope": 1435,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 1368,
+                        "name": "ElementaryTypeName",
+                        "src": "992:4:29"
+                      }
+                    ],
+                    "id": 1369,
+                    "name": "VariableDeclaration",
+                    "src": "992:19:29"
+                  }
+                ],
+                "id": 1370,
+                "name": "ParameterList",
+                "src": "900:112:29"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1371,
+                "name": "ParameterList",
+                "src": "1012:0:29"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "assignments": [
+                        null
+                      ],
+                      "initialValue": null
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "ld",
+                          "scope": 1435,
+                          "stateVariable": false,
+                          "storageLocation": "memory",
+                          "type": "struct TransportLot.LocationDelta memory",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "contractScope": null,
+                              "name": "LocationDelta",
+                              "referencedDeclaration": 1346,
+                              "type": "struct TransportLot.LocationDelta storage pointer"
+                            },
+                            "id": 1372,
+                            "name": "UserDefinedTypeName",
+                            "src": "1018:13:29"
+                          }
+                        ],
+                        "id": 1373,
+                        "name": "VariableDeclaration",
+                        "src": "1018:23:29"
+                      }
+                    ],
+                    "id": 1374,
+                    "name": "VariableDeclarationStatement",
+                    "src": "1018:23:29"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "int256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "lotId",
+                              "referencedDeclaration": 1335,
+                              "type": "int256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 1373,
+                                  "type": "struct TransportLot.LocationDelta memory",
+                                  "value": "ld"
+                                },
+                                "id": 1375,
+                                "name": "Identifier",
+                                "src": "1047:2:29"
+                              }
+                            ],
+                            "id": 1377,
+                            "name": "MemberAccess",
+                            "src": "1047:8:29"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 1359,
+                              "type": "int256",
+                              "value": "lotId"
+                            },
+                            "id": 1378,
+                            "name": "Identifier",
+                            "src": "1058:5:29"
+                          }
+                        ],
+                        "id": 1379,
+                        "name": "Assignment",
+                        "src": "1047:16:29"
+                      }
+                    ],
+                    "id": 1380,
+                    "name": "ExpressionStatement",
+                    "src": "1047:16:29"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "int256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "locationId",
+                              "referencedDeclaration": 1337,
+                              "type": "int256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 1373,
+                                  "type": "struct TransportLot.LocationDelta memory",
+                                  "value": "ld"
+                                },
+                                "id": 1381,
+                                "name": "Identifier",
+                                "src": "1069:2:29"
+                              }
+                            ],
+                            "id": 1383,
+                            "name": "MemberAccess",
+                            "src": "1069:13:29"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 1361,
+                              "type": "int256",
+                              "value": "locationId"
+                            },
+                            "id": 1384,
+                            "name": "Identifier",
+                            "src": "1085:10:29"
+                          }
+                        ],
+                        "id": 1385,
+                        "name": "Assignment",
+                        "src": "1069:26:29"
+                      }
+                    ],
+                    "id": 1386,
+                    "name": "ExpressionStatement",
+                    "src": "1069:26:29"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "enum TransportLot.LotStatus"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "lotStatus",
+                              "referencedDeclaration": 1339,
+                              "type": "enum TransportLot.LotStatus"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 1373,
+                                  "type": "struct TransportLot.LocationDelta memory",
+                                  "value": "ld"
+                                },
+                                "id": 1387,
+                                "name": "Identifier",
+                                "src": "1101:2:29"
+                              }
+                            ],
+                            "id": 1389,
+                            "name": "MemberAccess",
+                            "src": "1101:12:29"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "isStructConstructorCall": false,
+                              "lValueRequested": false,
+                              "names": [
+                                null
+                              ],
+                              "type": "enum TransportLot.LotStatus",
+                              "type_conversion": true
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": [
+                                    {
+                                      "typeIdentifier": "t_uint256",
+                                      "typeString": "uint256"
+                                    }
+                                  ],
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 1317,
+                                  "type": "type(enum TransportLot.LotStatus)",
+                                  "value": "LotStatus"
+                                },
+                                "id": 1390,
+                                "name": "Identifier",
+                                "src": "1116:9:29"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 1363,
+                                  "type": "uint256",
+                                  "value": "lotStatus"
+                                },
+                                "id": 1391,
+                                "name": "Identifier",
+                                "src": "1126:9:29"
+                              }
+                            ],
+                            "id": 1392,
+                            "name": "FunctionCall",
+                            "src": "1116:20:29"
+                          }
+                        ],
+                        "id": 1393,
+                        "name": "Assignment",
+                        "src": "1101:35:29"
+                      }
+                    ],
+                    "id": 1394,
+                    "name": "ExpressionStatement",
+                    "src": "1101:35:29"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "enum TransportLot.LotStatusRejectionReason"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "lotRejectionReason",
+                              "referencedDeclaration": 1341,
+                              "type": "enum TransportLot.LotStatusRejectionReason"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 1373,
+                                  "type": "struct TransportLot.LocationDelta memory",
+                                  "value": "ld"
+                                },
+                                "id": 1395,
+                                "name": "Identifier",
+                                "src": "1142:2:29"
+                              }
+                            ],
+                            "id": 1397,
+                            "name": "MemberAccess",
+                            "src": "1142:21:29"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "isStructConstructorCall": false,
+                              "lValueRequested": false,
+                              "names": [
+                                null
+                              ],
+                              "type": "enum TransportLot.LotStatusRejectionReason",
+                              "type_conversion": true
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": [
+                                    {
+                                      "typeIdentifier": "t_uint256",
+                                      "typeString": "uint256"
+                                    }
+                                  ],
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 1324,
+                                  "type": "type(enum TransportLot.LotStatusRejectionReason)",
+                                  "value": "LotStatusRejectionReason"
+                                },
+                                "id": 1398,
+                                "name": "Identifier",
+                                "src": "1166:24:29"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 1365,
+                                  "type": "uint256",
+                                  "value": "lotRejectionReason"
+                                },
+                                "id": 1399,
+                                "name": "Identifier",
+                                "src": "1191:18:29"
+                              }
+                            ],
+                            "id": 1400,
+                            "name": "FunctionCall",
+                            "src": "1166:44:29"
+                          }
+                        ],
+                        "id": 1401,
+                        "name": "Assignment",
+                        "src": "1142:68:29"
+                      }
+                    ],
+                    "id": 1402,
+                    "name": "ExpressionStatement",
+                    "src": "1142:68:29"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "enum TransportLot.DocumentFailureReason"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "documentRejectionReason",
+                              "referencedDeclaration": 1343,
+                              "type": "enum TransportLot.DocumentFailureReason"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 1373,
+                                  "type": "struct TransportLot.LocationDelta memory",
+                                  "value": "ld"
+                                },
+                                "id": 1403,
+                                "name": "Identifier",
+                                "src": "1216:2:29"
+                              }
+                            ],
+                            "id": 1405,
+                            "name": "MemberAccess",
+                            "src": "1216:26:29"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "isStructConstructorCall": false,
+                              "lValueRequested": false,
+                              "names": [
+                                null
+                              ],
+                              "type": "enum TransportLot.DocumentFailureReason",
+                              "type_conversion": true
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": [
+                                    {
+                                      "typeIdentifier": "t_uint256",
+                                      "typeString": "uint256"
+                                    }
+                                  ],
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 1329,
+                                  "type": "type(enum TransportLot.DocumentFailureReason)",
+                                  "value": "DocumentFailureReason"
+                                },
+                                "id": 1406,
+                                "name": "Identifier",
+                                "src": "1244:21:29"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 1367,
+                                  "type": "uint256",
+                                  "value": "documentRejection"
+                                },
+                                "id": 1407,
+                                "name": "Identifier",
+                                "src": "1266:17:29"
+                              }
+                            ],
+                            "id": 1408,
+                            "name": "FunctionCall",
+                            "src": "1244:40:29"
+                          }
+                        ],
+                        "id": 1409,
+                        "name": "Assignment",
+                        "src": "1216:68:29"
+                      }
+                    ],
+                    "id": 1410,
+                    "name": "ExpressionStatement",
+                    "src": "1216:68:29"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "enum TransportLot.PaymentStatus"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "payementStatus",
+                              "referencedDeclaration": 1345,
+                              "type": "enum TransportLot.PaymentStatus"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 1373,
+                                  "type": "struct TransportLot.LocationDelta memory",
+                                  "value": "ld"
+                                },
+                                "id": 1411,
+                                "name": "Identifier",
+                                "src": "1290:2:29"
+                              }
+                            ],
+                            "id": 1413,
+                            "name": "MemberAccess",
+                            "src": "1290:17:29"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "isStructConstructorCall": false,
+                              "lValueRequested": false,
+                              "names": [
+                                null
+                              ],
+                              "type": "enum TransportLot.PaymentStatus",
+                              "type_conversion": true
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": [
+                                    {
+                                      "typeIdentifier": "t_uint256",
+                                      "typeString": "uint256"
+                                    }
+                                  ],
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 1333,
+                                  "type": "type(enum TransportLot.PaymentStatus)",
+                                  "value": "PaymentStatus"
+                                },
+                                "id": 1414,
+                                "name": "Identifier",
+                                "src": "1310:13:29"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 1369,
+                                  "type": "uint256",
+                                  "value": "paymentsStatus"
+                                },
+                                "id": 1415,
+                                "name": "Identifier",
+                                "src": "1324:14:29"
+                              }
+                            ],
+                            "id": 1416,
+                            "name": "FunctionCall",
+                            "src": "1310:29:29"
+                          }
+                        ],
+                        "id": 1417,
+                        "name": "Assignment",
+                        "src": "1290:49:29"
+                      }
+                    ],
+                    "id": 1418,
+                    "name": "ExpressionStatement",
+                    "src": "1290:49:29"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "uint256",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_struct$_LocationDelta_$1346_memory_ptr",
+                                  "typeString": "struct TransportLot.LocationDelta memory"
+                                }
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "push",
+                              "referencedDeclaration": null,
+                              "type": "function (struct TransportLot.LocationDelta storage ref) returns (uint256)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "struct TransportLot.LocationDelta storage ref[] storage ref"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 1351,
+                                      "type": "mapping(int256 => struct TransportLot.LocationDelta storage ref[] storage ref)",
+                                      "value": "lotIdArray"
+                                    },
+                                    "id": 1419,
+                                    "name": "Identifier",
+                                    "src": "1345:10:29"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 1359,
+                                      "type": "int256",
+                                      "value": "lotId"
+                                    },
+                                    "id": 1420,
+                                    "name": "Identifier",
+                                    "src": "1356:5:29"
+                                  }
+                                ],
+                                "id": 1421,
+                                "name": "IndexAccess",
+                                "src": "1345:17:29"
+                              }
+                            ],
+                            "id": 1422,
+                            "name": "MemberAccess",
+                            "src": "1345:22:29"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 1373,
+                              "type": "struct TransportLot.LocationDelta memory",
+                              "value": "ld"
+                            },
+                            "id": 1423,
+                            "name": "Identifier",
+                            "src": "1368:2:29"
+                          }
+                        ],
+                        "id": 1424,
+                        "name": "FunctionCall",
+                        "src": "1345:26:29"
+                      }
+                    ],
+                    "id": 1425,
+                    "name": "ExpressionStatement",
+                    "src": "1345:26:29"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_stringliteral_ff09de30d052731b34154b5c9ab00caac983b1675c57e9b2fd36575d12acc551",
+                                  "typeString": "literal_string \"Length\""
+                                },
+                                {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 1357,
+                              "type": "function (string memory,uint256)",
+                              "value": "PrintArrayLength"
+                            },
+                            "id": 1426,
+                            "name": "Identifier",
+                            "src": "1377:16:29"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "4c656e677468",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "string",
+                              "type": "literal_string \"Length\"",
+                              "value": "Length"
+                            },
+                            "id": 1427,
+                            "name": "Literal",
+                            "src": "1394:8:29"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "length",
+                              "referencedDeclaration": null,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "struct TransportLot.LocationDelta storage ref[] storage ref"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 1351,
+                                      "type": "mapping(int256 => struct TransportLot.LocationDelta storage ref[] storage ref)",
+                                      "value": "lotIdArray"
+                                    },
+                                    "id": 1428,
+                                    "name": "Identifier",
+                                    "src": "1403:10:29"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 1359,
+                                      "type": "int256",
+                                      "value": "lotId"
+                                    },
+                                    "id": 1429,
+                                    "name": "Identifier",
+                                    "src": "1414:5:29"
+                                  }
+                                ],
+                                "id": 1430,
+                                "name": "IndexAccess",
+                                "src": "1403:17:29"
+                              }
+                            ],
+                            "id": 1431,
+                            "name": "MemberAccess",
+                            "src": "1403:24:29"
+                          }
+                        ],
+                        "id": 1432,
+                        "name": "FunctionCall",
+                        "src": "1377:52:29"
+                      }
+                    ],
+                    "id": 1433,
+                    "name": "ExpressionStatement",
+                    "src": "1377:52:29"
+                  }
+                ],
+                "id": 1434,
+                "name": "Block",
+                "src": "1012:420:29"
+              }
+            ],
+            "id": 1435,
+            "name": "FunctionDefinition",
+            "src": "869:563:29"
+          }
+        ],
+        "id": 1436,
+        "name": "ContractDefinition",
+        "src": "60:1375:29"
+      }
+    ],
+    "id": 1437,
+    "name": "SourceUnit",
+    "src": "0:1436:29"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.18+commit.9cf6e910.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "1.0.1",
+  "updatedAt": "2018-02-10T13:15:11.925Z"
+}

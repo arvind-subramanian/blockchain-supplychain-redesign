@@ -1,0 +1,630 @@
+{
+  "contractName": "ProductLot",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "pricePerPackage",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "packageWeight",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "farmerId",
+          "type": "int256"
+        },
+        {
+          "name": "lotId",
+          "type": "int256"
+        },
+        {
+          "name": "quantity",
+          "type": "int256"
+        },
+        {
+          "name": "agreement",
+          "type": "address"
+        },
+        {
+          "name": "doc",
+          "type": "address"
+        }
+      ],
+      "name": "addLot",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "farmerId",
+          "type": "int256"
+        },
+        {
+          "name": "lotId",
+          "type": "int256"
+        },
+        {
+          "name": "agreement",
+          "type": "address"
+        },
+        {
+          "name": "docStore",
+          "type": "address"
+        }
+      ],
+      "name": "addLot",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity ^0.4.18;\n\nimport \"./ProductLotBase.sol\";\nimport \"../documents/DocumentBase.sol\";\nimport \"../agreements/Agreement.sol\";\n\ncontract ProductLot is ProductLotBase {\n      uint constant priceDecimals = 2;\n      uint constant weightDecimals = 2;\n      uint public packageWeight;\n      uint public pricePerPackage;\n\n      struct LotInfo {\n        int farmerId;\n        int lotId;\n        string  category;\n        string imageHash;\n      }\n\n    function addLot(int farmerId,int lotId, Agreement agreement, DocumentBase docStore){\n\n    }\n}\n",
+  "sourcePath": "/Users/arvindsubramanian/supplychain-new/contracts/protocols/product_lot/ProductLot.sol",
+  "ast": {
+    "attributes": {
+      "absolutePath": "/Users/arvindsubramanian/supplychain-new/contracts/protocols/product_lot/ProductLot.sol",
+      "exportedSymbols": {
+        "ProductLot": [
+          1292
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.4",
+            ".18"
+          ]
+        },
+        "id": 1255,
+        "name": "PragmaDirective",
+        "src": "0:24:27"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 1311,
+          "absolutePath": "/Users/arvindsubramanian/supplychain-new/contracts/protocols/product_lot/ProductLotBase.sol",
+          "file": "./ProductLotBase.sol",
+          "scope": 1293,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 1256,
+        "name": "ImportDirective",
+        "src": "26:30:27"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 164,
+          "absolutePath": "/Users/arvindsubramanian/supplychain-new/contracts/protocols/documents/DocumentBase.sol",
+          "file": "../documents/DocumentBase.sol",
+          "scope": 1293,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 1257,
+        "name": "ImportDirective",
+        "src": "57:39:27"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 142,
+          "absolutePath": "/Users/arvindsubramanian/supplychain-new/contracts/protocols/agreements/Agreement.sol",
+          "file": "../agreements/Agreement.sol",
+          "scope": 1293,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 1258,
+        "name": "ImportDirective",
+        "src": "97:37:27"
+      },
+      {
+        "attributes": {
+          "contractDependencies": [
+            1310
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            1292,
+            1310
+          ],
+          "name": "ProductLot",
+          "scope": 1293
+        },
+        "children": [
+          {
+            "attributes": {
+              "arguments": [
+                null
+              ]
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "ProductLotBase",
+                  "referencedDeclaration": 1310,
+                  "type": "contract ProductLotBase"
+                },
+                "id": 1259,
+                "name": "UserDefinedTypeName",
+                "src": "159:14:27"
+              }
+            ],
+            "id": 1260,
+            "name": "InheritanceSpecifier",
+            "src": "159:14:27"
+          },
+          {
+            "attributes": {
+              "constant": true,
+              "name": "priceDecimals",
+              "scope": 1292,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "uint256",
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "uint",
+                  "type": "uint256"
+                },
+                "id": 1261,
+                "name": "ElementaryTypeName",
+                "src": "182:4:27"
+              },
+              {
+                "attributes": {
+                  "argumentTypes": null,
+                  "hexvalue": "32",
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "lValueRequested": false,
+                  "subdenomination": null,
+                  "token": "number",
+                  "type": "int_const 2",
+                  "value": "2"
+                },
+                "id": 1262,
+                "name": "Literal",
+                "src": "212:1:27"
+              }
+            ],
+            "id": 1263,
+            "name": "VariableDeclaration",
+            "src": "182:31:27"
+          },
+          {
+            "attributes": {
+              "constant": true,
+              "name": "weightDecimals",
+              "scope": 1292,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "uint256",
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "uint",
+                  "type": "uint256"
+                },
+                "id": 1264,
+                "name": "ElementaryTypeName",
+                "src": "221:4:27"
+              },
+              {
+                "attributes": {
+                  "argumentTypes": null,
+                  "hexvalue": "32",
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "lValueRequested": false,
+                  "subdenomination": null,
+                  "token": "number",
+                  "type": "int_const 2",
+                  "value": "2"
+                },
+                "id": 1265,
+                "name": "Literal",
+                "src": "252:1:27"
+              }
+            ],
+            "id": 1266,
+            "name": "VariableDeclaration",
+            "src": "221:32:27"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "packageWeight",
+              "scope": 1292,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "uint256",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "uint",
+                  "type": "uint256"
+                },
+                "id": 1267,
+                "name": "ElementaryTypeName",
+                "src": "261:4:27"
+              }
+            ],
+            "id": 1268,
+            "name": "VariableDeclaration",
+            "src": "261:25:27"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "pricePerPackage",
+              "scope": 1292,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "uint256",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "uint",
+                  "type": "uint256"
+                },
+                "id": 1269,
+                "name": "ElementaryTypeName",
+                "src": "294:4:27"
+              }
+            ],
+            "id": 1270,
+            "name": "VariableDeclaration",
+            "src": "294:27:27"
+          },
+          {
+            "attributes": {
+              "canonicalName": "ProductLot.LotInfo",
+              "name": "LotInfo",
+              "scope": 1292,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "farmerId",
+                  "scope": 1279,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "int256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "int",
+                      "type": "int256"
+                    },
+                    "id": 1271,
+                    "name": "ElementaryTypeName",
+                    "src": "355:3:27"
+                  }
+                ],
+                "id": 1272,
+                "name": "VariableDeclaration",
+                "src": "355:12:27"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "lotId",
+                  "scope": 1279,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "int256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "int",
+                      "type": "int256"
+                    },
+                    "id": 1273,
+                    "name": "ElementaryTypeName",
+                    "src": "377:3:27"
+                  }
+                ],
+                "id": 1274,
+                "name": "VariableDeclaration",
+                "src": "377:9:27"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "category",
+                  "scope": 1279,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string storage pointer",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string storage pointer"
+                    },
+                    "id": 1275,
+                    "name": "ElementaryTypeName",
+                    "src": "396:6:27"
+                  }
+                ],
+                "id": 1276,
+                "name": "VariableDeclaration",
+                "src": "396:16:27"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "imageHash",
+                  "scope": 1279,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string storage pointer",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string storage pointer"
+                    },
+                    "id": 1277,
+                    "name": "ElementaryTypeName",
+                    "src": "422:6:27"
+                  }
+                ],
+                "id": 1278,
+                "name": "VariableDeclaration",
+                "src": "422:16:27"
+              }
+            ],
+            "id": 1279,
+            "name": "StructDefinition",
+            "src": "330:117:27"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "implemented": true,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "addLot",
+              "payable": false,
+              "scope": 1292,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "farmerId",
+                      "scope": 1291,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "int256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "int",
+                          "type": "int256"
+                        },
+                        "id": 1280,
+                        "name": "ElementaryTypeName",
+                        "src": "469:3:27"
+                      }
+                    ],
+                    "id": 1281,
+                    "name": "VariableDeclaration",
+                    "src": "469:12:27"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "lotId",
+                      "scope": 1291,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "int256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "int",
+                          "type": "int256"
+                        },
+                        "id": 1282,
+                        "name": "ElementaryTypeName",
+                        "src": "482:3:27"
+                      }
+                    ],
+                    "id": 1283,
+                    "name": "VariableDeclaration",
+                    "src": "482:9:27"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "agreement",
+                      "scope": 1291,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "contract Agreement",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "contractScope": null,
+                          "name": "Agreement",
+                          "referencedDeclaration": 141,
+                          "type": "contract Agreement"
+                        },
+                        "id": 1284,
+                        "name": "UserDefinedTypeName",
+                        "src": "493:9:27"
+                      }
+                    ],
+                    "id": 1285,
+                    "name": "VariableDeclaration",
+                    "src": "493:19:27"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "docStore",
+                      "scope": 1291,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "contract DocumentBase",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "contractScope": null,
+                          "name": "DocumentBase",
+                          "referencedDeclaration": 163,
+                          "type": "contract DocumentBase"
+                        },
+                        "id": 1286,
+                        "name": "UserDefinedTypeName",
+                        "src": "514:12:27"
+                      }
+                    ],
+                    "id": 1287,
+                    "name": "VariableDeclaration",
+                    "src": "514:21:27"
+                  }
+                ],
+                "id": 1288,
+                "name": "ParameterList",
+                "src": "468:68:27"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1289,
+                "name": "ParameterList",
+                "src": "536:0:27"
+              },
+              {
+                "attributes": {
+                  "statements": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1290,
+                "name": "Block",
+                "src": "536:8:27"
+              }
+            ],
+            "id": 1291,
+            "name": "FunctionDefinition",
+            "src": "453:91:27"
+          }
+        ],
+        "id": 1292,
+        "name": "ContractDefinition",
+        "src": "136:410:27"
+      }
+    ],
+    "id": 1293,
+    "name": "SourceUnit",
+    "src": "0:547:27"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.18+commit.9cf6e910.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "1.0.1",
+  "updatedAt": "2018-02-10T13:15:11.924Z"
+}

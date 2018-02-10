@@ -1,0 +1,56 @@
+{
+  "contractName": "LetterCredit",
+  "abi": [],
+  "bytecode": "0x60606040523415600e57600080fd5b603580601b6000396000f3006060604052600080fd00a165627a7a723058208e09575da23f01517e895e3f0734975bdfc460c51f8986796979f2da78d065cc0029",
+  "deployedBytecode": "0x6060604052600080fd00a165627a7a723058208e09575da23f01517e895e3f0734975bdfc460c51f8986796979f2da78d065cc0029",
+  "sourceMap": "0:28:17:-;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "0:28:17:-;;;;;",
+  "source": "contract LetterCredit {\n  \n}\n",
+  "sourcePath": "/Users/arvindsubramanian/supplychain-new/contracts/protocols/documents/payment/LetterCredit.sol",
+  "ast": {
+    "attributes": {
+      "absolutePath": "/Users/arvindsubramanian/supplychain-new/contracts/protocols/documents/payment/LetterCredit.sol",
+      "exportedSymbols": {
+        "LetterCredit": [
+          698
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            698
+          ],
+          "name": "LetterCredit",
+          "nodes": [
+            null
+          ],
+          "scope": 699
+        },
+        "id": 698,
+        "name": "ContractDefinition",
+        "src": "0:28:17"
+      }
+    ],
+    "id": 699,
+    "name": "SourceUnit",
+    "src": "0:29:17"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.18+commit.9cf6e910.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "1.0.1",
+  "updatedAt": "2018-02-10T13:15:11.923Z"
+}

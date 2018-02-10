@@ -1,0 +1,590 @@
+{
+  "contractName": "CertificateOfOriginActual",
+  "abi": [],
+  "bytecode": "0x60606040523415600e57600080fd5b603580601b6000396000f3006060604052600080fd00a165627a7a7230582081d7fa14625a9ddb506b4872b29e44c12c328579ef58b8b5a5c2ad883de170380029",
+  "deployedBytecode": "0x6060604052600080fd00a165627a7a7230582081d7fa14625a9ddb506b4872b29e44c12c328579ef58b8b5a5c2ad883de170380029",
+  "sourceMap": "120:983:10:-;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "120:983:10:-;;;;;",
+  "source": "//http://agriexchange.apeda.gov.in/Ready%20Reckoner/Certificates_of_Origin.aspx\nimport \"./CertificateOfOriginMeta.sol\";\ncontract CertificateOfOriginActual {\nstruct certificateOriginMetaData {\n  string certificateOriginType; //\n  /*\nThis can be\n1.Non preferential Certificate of Origin:\n\n2.Certificate of Origin for availing Concessions under GSP\n\n3. Certificate for availing Concessions under Commonwealth Preferences (CWP)\n\n4.  Certificate for availing Concessions under other Systems of. Preference\n  */\n  string companyName;\n  string importerName;\n  string packageNumber;\n  string packageDescription;\n  string chamberOfCommerceApproval;\n}\n\n// This data can be used to interact with smart contract of exporter;\nstruct certificateOfOriginData {\nstring chamberOfCommerce;\nstring logoChamberOfCommerce;\nstring addressExporter;\nstring addressConsignee;\nstring vesselName;\nstring portOfLanding;\nstring portOfDischarge;\nstring placeOfDelivery;\nstring containerNumber;\nstring packageDescription;\nint quantity;\nstring signingAuthority;\nstring ipfsHashOfCertificateOrigin; // link to the certificate data\n}\n\n\n}\n",
+  "sourcePath": "/Users/arvindsubramanian/supplychain-new/contracts/protocols/documents/goods/CertificateOfOriginActual.sol",
+  "ast": {
+    "attributes": {
+      "absolutePath": "/Users/arvindsubramanian/supplychain-new/contracts/protocols/documents/goods/CertificateOfOriginActual.sol",
+      "exportedSymbols": {
+        "CertificateOfOriginActual": [
+          334
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "SourceUnit": 338,
+          "absolutePath": "/Users/arvindsubramanian/supplychain-new/contracts/protocols/documents/goods/CertificateOfOriginMeta.sol",
+          "file": "./CertificateOfOriginMeta.sol",
+          "scope": 335,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 293,
+        "name": "ImportDirective",
+        "src": "80:39:10"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            334
+          ],
+          "name": "CertificateOfOriginActual",
+          "scope": 335
+        },
+        "children": [
+          {
+            "attributes": {
+              "canonicalName": "CertificateOfOriginActual.certificateOriginMetaData",
+              "name": "certificateOriginMetaData",
+              "scope": 334,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "certificateOriginType",
+                  "scope": 306,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string storage pointer",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string storage pointer"
+                    },
+                    "id": 294,
+                    "name": "ElementaryTypeName",
+                    "src": "194:6:10"
+                  }
+                ],
+                "id": 295,
+                "name": "VariableDeclaration",
+                "src": "194:28:10"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "companyName",
+                  "scope": 306,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string storage pointer",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string storage pointer"
+                    },
+                    "id": 296,
+                    "name": "ElementaryTypeName",
+                    "src": "508:6:10"
+                  }
+                ],
+                "id": 297,
+                "name": "VariableDeclaration",
+                "src": "508:18:10"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "importerName",
+                  "scope": 306,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string storage pointer",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string storage pointer"
+                    },
+                    "id": 298,
+                    "name": "ElementaryTypeName",
+                    "src": "530:6:10"
+                  }
+                ],
+                "id": 299,
+                "name": "VariableDeclaration",
+                "src": "530:19:10"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "packageNumber",
+                  "scope": 306,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string storage pointer",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string storage pointer"
+                    },
+                    "id": 300,
+                    "name": "ElementaryTypeName",
+                    "src": "553:6:10"
+                  }
+                ],
+                "id": 301,
+                "name": "VariableDeclaration",
+                "src": "553:20:10"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "packageDescription",
+                  "scope": 306,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string storage pointer",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string storage pointer"
+                    },
+                    "id": 302,
+                    "name": "ElementaryTypeName",
+                    "src": "577:6:10"
+                  }
+                ],
+                "id": 303,
+                "name": "VariableDeclaration",
+                "src": "577:25:10"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "chamberOfCommerceApproval",
+                  "scope": 306,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string storage pointer",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string storage pointer"
+                    },
+                    "id": 304,
+                    "name": "ElementaryTypeName",
+                    "src": "606:6:10"
+                  }
+                ],
+                "id": 305,
+                "name": "VariableDeclaration",
+                "src": "606:32:10"
+              }
+            ],
+            "id": 306,
+            "name": "StructDefinition",
+            "src": "157:484:10"
+          },
+          {
+            "attributes": {
+              "canonicalName": "CertificateOfOriginActual.certificateOfOriginData",
+              "name": "certificateOfOriginData",
+              "scope": 334,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "chamberOfCommerce",
+                  "scope": 333,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string storage pointer",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string storage pointer"
+                    },
+                    "id": 307,
+                    "name": "ElementaryTypeName",
+                    "src": "746:6:10"
+                  }
+                ],
+                "id": 308,
+                "name": "VariableDeclaration",
+                "src": "746:24:10"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "logoChamberOfCommerce",
+                  "scope": 333,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string storage pointer",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string storage pointer"
+                    },
+                    "id": 309,
+                    "name": "ElementaryTypeName",
+                    "src": "772:6:10"
+                  }
+                ],
+                "id": 310,
+                "name": "VariableDeclaration",
+                "src": "772:28:10"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "addressExporter",
+                  "scope": 333,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string storage pointer",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string storage pointer"
+                    },
+                    "id": 311,
+                    "name": "ElementaryTypeName",
+                    "src": "802:6:10"
+                  }
+                ],
+                "id": 312,
+                "name": "VariableDeclaration",
+                "src": "802:22:10"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "addressConsignee",
+                  "scope": 333,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string storage pointer",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string storage pointer"
+                    },
+                    "id": 313,
+                    "name": "ElementaryTypeName",
+                    "src": "826:6:10"
+                  }
+                ],
+                "id": 314,
+                "name": "VariableDeclaration",
+                "src": "826:23:10"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "vesselName",
+                  "scope": 333,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string storage pointer",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string storage pointer"
+                    },
+                    "id": 315,
+                    "name": "ElementaryTypeName",
+                    "src": "851:6:10"
+                  }
+                ],
+                "id": 316,
+                "name": "VariableDeclaration",
+                "src": "851:17:10"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "portOfLanding",
+                  "scope": 333,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string storage pointer",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string storage pointer"
+                    },
+                    "id": 317,
+                    "name": "ElementaryTypeName",
+                    "src": "870:6:10"
+                  }
+                ],
+                "id": 318,
+                "name": "VariableDeclaration",
+                "src": "870:20:10"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "portOfDischarge",
+                  "scope": 333,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string storage pointer",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string storage pointer"
+                    },
+                    "id": 319,
+                    "name": "ElementaryTypeName",
+                    "src": "892:6:10"
+                  }
+                ],
+                "id": 320,
+                "name": "VariableDeclaration",
+                "src": "892:22:10"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "placeOfDelivery",
+                  "scope": 333,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string storage pointer",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string storage pointer"
+                    },
+                    "id": 321,
+                    "name": "ElementaryTypeName",
+                    "src": "916:6:10"
+                  }
+                ],
+                "id": 322,
+                "name": "VariableDeclaration",
+                "src": "916:22:10"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "containerNumber",
+                  "scope": 333,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string storage pointer",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string storage pointer"
+                    },
+                    "id": 323,
+                    "name": "ElementaryTypeName",
+                    "src": "940:6:10"
+                  }
+                ],
+                "id": 324,
+                "name": "VariableDeclaration",
+                "src": "940:22:10"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "packageDescription",
+                  "scope": 333,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string storage pointer",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string storage pointer"
+                    },
+                    "id": 325,
+                    "name": "ElementaryTypeName",
+                    "src": "964:6:10"
+                  }
+                ],
+                "id": 326,
+                "name": "VariableDeclaration",
+                "src": "964:25:10"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "quantity",
+                  "scope": 333,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "int256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "int",
+                      "type": "int256"
+                    },
+                    "id": 327,
+                    "name": "ElementaryTypeName",
+                    "src": "991:3:10"
+                  }
+                ],
+                "id": 328,
+                "name": "VariableDeclaration",
+                "src": "991:12:10"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "signingAuthority",
+                  "scope": 333,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string storage pointer",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string storage pointer"
+                    },
+                    "id": 329,
+                    "name": "ElementaryTypeName",
+                    "src": "1005:6:10"
+                  }
+                ],
+                "id": 330,
+                "name": "VariableDeclaration",
+                "src": "1005:23:10"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "ipfsHashOfCertificateOrigin",
+                  "scope": 333,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string storage pointer",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string storage pointer"
+                    },
+                    "id": 331,
+                    "name": "ElementaryTypeName",
+                    "src": "1030:6:10"
+                  }
+                ],
+                "id": 332,
+                "name": "VariableDeclaration",
+                "src": "1030:34:10"
+              }
+            ],
+            "id": 333,
+            "name": "StructDefinition",
+            "src": "713:386:10"
+          }
+        ],
+        "id": 334,
+        "name": "ContractDefinition",
+        "src": "120:983:10"
+      }
+    ],
+    "id": 335,
+    "name": "SourceUnit",
+    "src": "80:1024:10"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.18+commit.9cf6e910.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "1.0.1",
+  "updatedAt": "2018-02-10T13:15:11.920Z"
+}

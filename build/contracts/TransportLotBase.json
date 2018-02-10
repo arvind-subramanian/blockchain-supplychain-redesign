@@ -1,0 +1,299 @@
+{
+  "contractName": "TransportLotBase",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "lotId",
+          "type": "int256"
+        },
+        {
+          "name": "locationId",
+          "type": "int256"
+        },
+        {
+          "name": "lotStatus",
+          "type": "uint256"
+        },
+        {
+          "name": "lotRejectionReason",
+          "type": "uint256"
+        },
+        {
+          "name": "documentRejection",
+          "type": "uint256"
+        },
+        {
+          "name": "paymentsStatus",
+          "type": "uint256"
+        }
+      ],
+      "name": "addLocationTransitInfo",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity ^0.4.18;\ncontract TransportLotBase{\n    function addLocationTransitInfo(int lotId, int locationId,uint lotStatus,\nuint lotRejectionReason, uint documentRejection, uint paymentsStatus);\n}\n",
+  "sourcePath": "/Users/arvindsubramanian/supplychain-new/contracts/protocols/transport/TransportLotBase.sol",
+  "ast": {
+    "attributes": {
+      "absolutePath": "/Users/arvindsubramanian/supplychain-new/contracts/protocols/transport/TransportLotBase.sol",
+      "exportedSymbols": {
+        "TransportLotBase": [
+          1454
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.4",
+            ".18"
+          ]
+        },
+        "id": 1438,
+        "name": "PragmaDirective",
+        "src": "0:24:30"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            1454
+          ],
+          "name": "TransportLotBase",
+          "scope": 1455
+        },
+        "children": [
+          {
+            "attributes": {
+              "body": null,
+              "constant": false,
+              "implemented": false,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "addLocationTransitInfo",
+              "payable": false,
+              "scope": 1454,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "lotId",
+                      "scope": 1453,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "int256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "int",
+                          "type": "int256"
+                        },
+                        "id": 1439,
+                        "name": "ElementaryTypeName",
+                        "src": "88:3:30"
+                      }
+                    ],
+                    "id": 1440,
+                    "name": "VariableDeclaration",
+                    "src": "88:9:30"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "locationId",
+                      "scope": 1453,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "int256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "int",
+                          "type": "int256"
+                        },
+                        "id": 1441,
+                        "name": "ElementaryTypeName",
+                        "src": "99:3:30"
+                      }
+                    ],
+                    "id": 1442,
+                    "name": "VariableDeclaration",
+                    "src": "99:14:30"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "lotStatus",
+                      "scope": 1453,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 1443,
+                        "name": "ElementaryTypeName",
+                        "src": "114:4:30"
+                      }
+                    ],
+                    "id": 1444,
+                    "name": "VariableDeclaration",
+                    "src": "114:14:30"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "lotRejectionReason",
+                      "scope": 1453,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 1445,
+                        "name": "ElementaryTypeName",
+                        "src": "130:4:30"
+                      }
+                    ],
+                    "id": 1446,
+                    "name": "VariableDeclaration",
+                    "src": "130:23:30"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "documentRejection",
+                      "scope": 1453,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 1447,
+                        "name": "ElementaryTypeName",
+                        "src": "155:4:30"
+                      }
+                    ],
+                    "id": 1448,
+                    "name": "VariableDeclaration",
+                    "src": "155:22:30"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "paymentsStatus",
+                      "scope": 1453,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 1449,
+                        "name": "ElementaryTypeName",
+                        "src": "179:4:30"
+                      }
+                    ],
+                    "id": 1450,
+                    "name": "VariableDeclaration",
+                    "src": "179:19:30"
+                  }
+                ],
+                "id": 1451,
+                "name": "ParameterList",
+                "src": "87:112:30"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1452,
+                "name": "ParameterList",
+                "src": "199:0:30"
+              }
+            ],
+            "id": 1453,
+            "name": "FunctionDefinition",
+            "src": "56:144:30"
+          }
+        ],
+        "id": 1454,
+        "name": "ContractDefinition",
+        "src": "25:177:30"
+      }
+    ],
+    "id": 1455,
+    "name": "SourceUnit",
+    "src": "0:203:30"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.18+commit.9cf6e910.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "1.0.1",
+  "updatedAt": "2018-02-10T13:15:11.925Z"
+}

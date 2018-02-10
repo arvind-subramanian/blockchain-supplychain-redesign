@@ -1,0 +1,56 @@
+{
+  "contractName": "DocumentBase",
+  "abi": [],
+  "bytecode": "0x60606040523415600e57600080fd5b603580601b6000396000f3006060604052600080fd00a165627a7a72305820aa8cb4fb36e4d718511077256eb361fa2e6a59bf171874fd0354f7bb4cfc5bfc0029",
+  "deployedBytecode": "0x6060604052600080fd00a165627a7a72305820aa8cb4fb36e4d718511077256eb361fa2e6a59bf171874fd0354f7bb4cfc5bfc0029",
+  "sourceMap": "112:26:5:-;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "112:26:5:-;;;;;",
+  "source": "\n/* Refer to document contracts in goods, foreign excgane, payment to expose functions used in buying/selling*/\ncontract DocumentBase {\n\n}\n",
+  "sourcePath": "/Users/arvindsubramanian/supplychain-new/contracts/protocols/documents/DocumentBase.sol",
+  "ast": {
+    "attributes": {
+      "absolutePath": "/Users/arvindsubramanian/supplychain-new/contracts/protocols/documents/DocumentBase.sol",
+      "exportedSymbols": {
+        "DocumentBase": [
+          163
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            163
+          ],
+          "name": "DocumentBase",
+          "nodes": [
+            null
+          ],
+          "scope": 164
+        },
+        "id": 163,
+        "name": "ContractDefinition",
+        "src": "112:26:5"
+      }
+    ],
+    "id": 164,
+    "name": "SourceUnit",
+    "src": "112:27:5"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.18+commit.9cf6e910.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "1.0.1",
+  "updatedAt": "2018-02-10T13:15:11.919Z"
+}
