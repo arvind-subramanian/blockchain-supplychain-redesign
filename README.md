@@ -59,6 +59,15 @@ Specific attributes of each of the document listed above can be obtained online 
   Other important contract categories  are the Agreement, IOTMeasurements, and ProductLot. 
   Through inheritance structure, we structure the contracts with the base contract "definining" the main functionality, and the subclass actually implementing the same.
   
+  **These are organized under contracts/protocols/agreements, contracts/protocols/product_lot/, contract/protocols/iotmeasurements**
+  
+  
+## IN TRANSIT INFORMATION OF PRODUCT:
+
+**This is organized under contract/protocol/transport** 
+
+This Contract captures information of the LotStatus, the rejection reason, document status etc.  
+  
   
  
  
